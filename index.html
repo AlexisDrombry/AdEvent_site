@@ -163,10 +163,11 @@ p{max-width:44ch;color:var(--espresso)}
 .why__row:hover .h-sm{translate:16px 0}
 
 /* clients */
-.clients{background:var(--parchment)}
-.clients__grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--stone);border-left:1px solid var(--stone)}
-.clients__grid li{list-style:none;border-right:1px solid var(--stone);border-bottom:1px solid var(--stone);min-height:150px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;transition:background-color .4s var(--ease)}
-.clients__grid li:hover{background:var(--linen)}
+.clients{background:var(--linen);--line:rgba(97,91,83,.3)} /* linen sets it apart from the parchment "Pourquoi nous choisir" */
+.clients .cap{color:var(--espresso)}
+.clients__grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.clients__grid li{list-style:none;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:150px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;transition:background-color .4s var(--ease)}
+.clients__grid li:hover{background:var(--parchment)}
 .clients__grid .h-xs{font-family:var(--serif);text-transform:uppercase}
 
 /* cta */
@@ -411,7 +412,7 @@ p{max-width:44ch;color:var(--espresso)}
   </section>
 
   <!-- CLIENTS -->
-  <section class="sec clients" style="padding-top:0">
+  <section class="sec clients">
     <div class="sec-head">
       <h2 class="serif h-lg" data-lines><span class="line"><span>Ils nous ont</span></span><span class="line"><span>fait confiance</span></span></h2>
       <span class="cap">(04) Références</span>
