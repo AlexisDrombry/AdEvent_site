@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AD Événements — DJ, Photobooth & Événementiel · Arras, Hauts-de-France</title>
-<meta name="description" content="AD Événements, agence événementielle à Arras : DJ mariage, entreprise et particulier, location de photobooth, sonorisation, artifices et décoration dans les Hauts-de-France.">
+<title>DJ et prestations événementielles à Arras et Lille | AD Événements</title>
+<meta name="description" content="DJ et prestations événementielles clé en main à Arras, Lille et dans les Hauts-de-France : mariages, entreprises, photobooth. Devis gratuit.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
@@ -41,12 +41,19 @@ p{max-width:44ch;color:var(--espresso)}
 .line>span{display:block}
 
 /* ---------- buttons ---------- */
-.btn{display:inline-flex;align-items:center;gap:12px;padding:20px 28px;border:1px solid currentColor;border-radius:3px;font:500 14px/1 var(--sans);text-transform:uppercase;letter-spacing:-.01em;position:relative;overflow:hidden;isolation:isolate;transition:color .4s var(--ease)}
+.btn{background:transparent;cursor:pointer;display:inline-flex;align-items:center;gap:12px;padding:20px 28px;border:1px solid currentColor;border-radius:3px;font:500 14px/1 var(--sans);text-transform:uppercase;letter-spacing:-.01em;position:relative;overflow:hidden;isolation:isolate;transition:color .4s var(--ease)}
 .btn::before{content:"";position:absolute;inset:0;background:currentColor;transform:scaleY(0);transform-origin:bottom;transition:transform .4s var(--ease);z-index:-1}
 .btn span{transition:color .4s var(--ease)}
 .btn:hover::before{transform:scaleY(1)}
 .btn--light{color:var(--parchment)} .btn--light:hover span{color:var(--roast)}
 .btn--dark{color:var(--onyx)} .btn--dark:hover span{color:var(--parchment)}
+/* filled "Devis gratuit": parchment by default, onyx on the parchment nav bar */
+.btn--fill{background:var(--parchment);border-color:var(--parchment);color:var(--roast);transition:background-color .4s var(--ease),border-color .4s var(--ease),color .4s var(--ease)}
+.btn--fill::before{display:none}
+.btn.btn--fill span{color:inherit}
+.btn--fill:hover{background:var(--linen);border-color:var(--linen)}
+.nav.is-solid .btn--fill{background:var(--onyx);border-color:var(--onyx);color:var(--parchment)}
+.nav.is-solid .btn--fill:hover{background:var(--espresso);border-color:var(--espresso)}
 .link{font:500 13px/1 var(--sans);text-transform:uppercase;display:inline-flex;gap:8px;align-items:center;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;padding-bottom:4px;transition:background-size .4s var(--ease)}
 .link:hover{background-size:100% 1px}
 
@@ -54,8 +61,10 @@ p{max-width:44ch;color:var(--espresso)}
 /* ---------- nav ---------- */
 .nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px var(--gut);color:var(--parchment);transition:color .4s var(--ease),background-color .4s var(--ease),padding .4s var(--ease)}
 .nav.is-solid{background:var(--parchment);color:var(--onyx);padding-block:14px;border-bottom:1px solid var(--stone)}
+.nav.is-dark{background:var(--roast);padding-block:14px;border-bottom:1px solid rgba(216,203,184,.15)}
 .nav__logo{display:flex;align-items:center;gap:10px;font:700 15px/1 var(--sans);letter-spacing:-.02em}
-.nav__mark{width:34px;height:34px;border:1px solid currentColor;border-radius:3px;display:grid;place-items:center;font:300 18px/1 var(--serif)}
+.nav__mark{display:block;line-height:0}
+.nav__mark svg{width:46px;height:auto;fill:currentColor}
 .nav__links{display:flex;gap:28px;list-style:none}
 .nav__links a{font:500 14px/1 var(--sans);text-transform:uppercase;letter-spacing:-.01em;position:relative}
 .nav__links a::after{content:"";position:absolute;left:0;bottom:-6px;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
@@ -83,7 +92,9 @@ p{max-width:44ch;color:var(--espresso)}
 .hero__inner{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 var(--gut) clamp(24px,4vw,42px)}
 .hero__meta{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:clamp(16px,2vw,28px)}
 .hero__meta .cap{color:var(--parchment)}
-.hero__tag{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:clamp(26px,3.2vw,42px);line-height:1;letter-spacing:-.03em;max-width:14ch}
+.hero__tag{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:clamp(28px,3.4vw,50px);line-height:1.05;letter-spacing:-.03em;max-width:24ch}
+.hero__sub{color:var(--parchment);font-size:15px;margin-top:16px;max-width:44ch}
+.hero__meta .btn{flex-shrink:0}
 .hero img,.atmos img,.cta img{filter:grayscale(1) sepia(.45) brightness(.78) contrast(1.05)} /* warm monochrome grade keeps any placeholder on-palette */
 .wordmark{font:500 clamp(48px,11.4vw,199px)/.8 var(--sans);letter-spacing:-.016em;text-transform:uppercase;white-space:nowrap;display:flex;justify-content:space-between;gap:.2em}
 .wordmark .wm{display:flex;overflow:hidden;padding-top:.1em}
@@ -160,7 +171,7 @@ p{max-width:44ch;color:var(--espresso)}
 
 /* cta */
 .cta{position:relative;min-height:100svh;color:var(--parchment);background:var(--roast);overflow:hidden;display:flex;flex-direction:column}
-.cta__media{position:absolute;inset:-10% 0;opacity:.45}
+.cta__media{position:absolute;inset:-10% 0;opacity:.2}
 .cta__inner{position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;padding:var(--sec) var(--gut) 42px;gap:42px}
 .cta__actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
 .cta__contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;border-top:1px solid rgba(216,203,184,.25);padding-top:24px}
@@ -205,12 +216,47 @@ p{max-width:44ch;color:var(--espresso)}
   .reveal-img{clip-path:none}
   .atmos__frame{clip-path:none}
 }
+/* contact + quote form (dark section) */
+.cta__inner{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(42px,6vw,92px);align-items:start}
+.cta__lead{display:flex;flex-direction:column;gap:28px}
+.cta__lead .display{font-size:clamp(48px,6vw,92px)}
+.cta__lead p{color:var(--parchment);opacity:.8}
+.cta__contacts{grid-template-columns:1fr}
+.devis__form .cap,.cta__contacts .cap{color:rgba(216,203,184,.75)}
+.devis__form{display:grid;grid-template-columns:1fr 1fr;gap:24px 28px;color-scheme:dark}
+.devis__full{grid-column:1/-1}
+.field{display:flex;flex-direction:column;gap:8px}
+.field input,.field select,.field textarea{font:500 15px/1.4 var(--sans);color:var(--parchment);background:transparent;border:0;border-bottom:1px solid rgba(216,203,184,.45);border-radius:0;padding:10px 0;width:100%;transition:border-color .4s var(--ease)}
+.field textarea{resize:vertical;border:1px solid rgba(216,203,184,.45);border-radius:3px;padding:12px}
+.field ::placeholder{color:var(--walnut)}
+.field select{appearance:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23d8cbb8'/%3E%3C/svg%3E") right center no-repeat}
+.field select option{color:var(--onyx)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--saffron)}
+.field input:user-invalid,.field select:user-invalid{border-color:var(--saffron)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;border:0}
+.chips legend{margin-bottom:8px}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;padding:10px 14px;border:1px solid rgba(216,203,184,.45);border-radius:3px;font:500 12px/1 var(--sans);text-transform:uppercase;cursor:pointer;transition:background-color .4s var(--ease),color .4s var(--ease)}
+.chips input:checked+span{background:var(--parchment);color:var(--roast);border-color:var(--parchment)}
+.chips input:focus-visible+span{outline:1px solid var(--saffron);outline-offset:3px}
+.devis__foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.devis__note{font-size:13px;color:var(--walnut)}
+.devis__form .btn[disabled]{opacity:.5;pointer-events:none}
+.devis__status{font-size:15px;min-height:1.4em;color:var(--parchment)}
+.devis__status.is-err{border-left:2px solid var(--saffron);padding-left:12px}
+.devis__hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+@media (max-width:960px){
+  .cta__inner{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .devis__form{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
 <header class="nav" id="nav">
-  <a href="#top" class="nav__logo" aria-label="AD Événements — accueil"><span class="nav__mark">AD</span><span>Événements</span></a>
+  <a href="#top" class="nav__logo" aria-label="AD Événements — accueil"><span class="nav__mark"><svg viewBox="350 195 790 550" aria-hidden="true"><path d="M627 201h10l257 538H771L581 338 381 739h-23z"/><path d="M685 201h185c150 0 263 119 263 264 0 135-93 245-227 274 94-69 135-159 135-274 0-135-91-243-201-243-40 0-57 10-57 38l-1 151z"/></svg></span></a>
   <ul class="nav__links">
     <li><a href="#prestations">Prestations</a></li>
     <li><a href="#photobooth">Photobooth</a></li>
@@ -220,7 +266,7 @@ p{max-width:44ch;color:var(--espresso)}
   </ul>
   <div class="nav__right">
     <a class="nav__tel" href="tel:+33677493859">06 77 49 38 59</a>
-    <a class="btn btn--light" href="#contact"><span>Devis gratuit</span></a>
+    <a class="btn btn--light btn--fill" href="#devis"><span>Devis gratuit</span></a>
     <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mmenu"><i></i><i></i></button>
   </div>
 </header>
@@ -242,20 +288,23 @@ p{max-width:44ch;color:var(--espresso)}
 <main id="top">
   <!-- HERO -->
   <section class="hero" aria-label="Accueil">
-    <div class="hero__media"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=2400&q=80" alt="Platines d'un DJ sous un éclairage tamisé"></div>
+    <div class="hero__media"><img src="images/hero-soiree-guirlandes.jpg" alt="Piste de danse sous des guirlandes lumineuses pendant une réception"></div>
     <div class="hero__shade"></div>
     <div class="hero__inner">
       <div class="hero__meta">
-        <h2 class="hero__tag" data-hero-fade>Créons des moments inoubliables</h2>
-        <span class="cap" data-hero-fade>DJ · Photobooth · Événementiel<br>Arras — Hauts-de-France</span>
+        <div>
+          <h1 class="hero__tag" data-hero-fade>DJ et prestations événementielles à Arras, Lille et dans les Hauts-de-France</h1>
+          <p class="hero__sub" data-hero-fade>Des prestations clé en main à Arras, Lille et partout en France.</p>
+        </div>
+        <a class="btn btn--light btn--fill" data-hero-fade href="#devis"><span>Devis gratuit</span></a>
       </div>
-      <h1 class="wordmark" aria-label="AD Événements">
-        <span class="wm" aria-hidden="true">AD</span>
-        <span class="wm" aria-hidden="true">Événements</span>
-      </h1>
+      <div class="wordmark" aria-hidden="true">
+        <span class="wm">AD</span>
+        <span class="wm">Événements</span>
+      </div>
       <div class="hero__foot" data-hero-fade>
         <span class="scrollcue cap" style="color:var(--parchment)"><i></i>Découvrir</span>
-        <a class="link" style="color:var(--parchment)" href="#contact">Demander un devis →</a>
+        <span class="cap" style="color:var(--parchment)">DJ · Photobooth · Événementiel</span>
       </div>
     </div>
   </section>
@@ -268,8 +317,8 @@ p{max-width:44ch;color:var(--espresso)}
       <p class="manifesto__text serif" data-words>Une agence événementielle qui compose chaque soirée comme une partition&nbsp;: le son, la lumière, et l'émotion juste.</p>
     </div>
     <div class="about">
-      <div class="about__img1 reveal-img"><img loading="lazy" data-speed="-12" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1400&q=80" alt="Table de réception dressée pour un mariage"></div>
-      <div class="about__img2 reveal-img"><img loading="lazy" data-speed="12" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1000&q=80" alt="Décoration lumineuse d'une salle de réception"></div>
+      <div class="about__img1 reveal-img"><img loading="lazy" data-speed="-12" src="images/agence-dj-mariage-arras.jpg" alt="DJ AD Événements aux platines lors d'un mariage à Arras"></div>
+      <div class="about__img2 reveal-img"><img loading="lazy" data-speed="12" src="images/agence-champagne.jpg" alt="Coupes de champagne et guirlandes lumineuses"></div>
       <div class="about__txt">
         <span class="cap">Basés à Arras</span>
         <p class="body-lg" data-fade>DJ, photobooth et organisation d'événements dans tous les Hauts-de-France.</p>
@@ -288,35 +337,35 @@ p{max-width:44ch;color:var(--espresso)}
       </div>
       <div class="services__track">
         <article class="card">
-          <div class="card__img"><img loading="lazy" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1000&q=80" alt="Mariés lors de leur réception"></div>
+          <div class="card__img"><img loading="lazy" src="images/dj-mariage-hauts-de-france.jpg" alt="Mariés et invités trinquant au champagne"></div>
           <div class="card__top"><span class="cap card__num">01</span><span class="cap">Mariage</span></div>
           <h3 class="serif h-sm">DJ Mariage</h3>
           <p>Le DJ est un pilier de la réussite d'un mariage. Nous coordonnons chaque temps fort de votre journée, du vin d'honneur à la dernière danse.</p>
           <a class="link" href="https://adevenements.fr/dj-mariage-hauts-de-france">Découvrir →</a>
         </article>
         <article class="card">
-          <div class="card__img"><img loading="lazy" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1000&q=80" alt="Salle de conférence éclairée"></div>
+          <div class="card__img"><img loading="lazy" src="images/dj-soiree-entreprise-carlton.jpg" alt="Salle de réception du Carlton Cannes éclairée pour une soirée d'entreprise"></div>
           <div class="card__top"><span class="cap card__num">02</span><span class="cap">Entreprise</span></div>
           <h3 class="serif h-sm">Événements professionnels</h3>
           <p>Conférences, séminaires, galas, lancements de produit&nbsp;: une ambiance sonore maîtrisée, à l'image de votre marque.</p>
           <a class="link" href="https://adevenements.fr/dj-evenement-professionnel-hauts-de-france">Découvrir →</a>
         </article>
         <article class="card">
-          <div class="card__img"><img loading="lazy" src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1000&q=80" alt="Décoration de fête privée"></div>
+          <div class="card__img"><img loading="lazy" src="images/dj-soiree-privee.jpg" alt="Invités qui trinquent sous les confettis"></div>
           <div class="card__top"><span class="cap card__num">03</span><span class="cap">Particulier</span></div>
           <h3 class="serif h-sm">Soirées privées</h3>
           <p>Anniversaires, crémaillères, baptêmes, communions et réceptions privées&nbsp;: une soirée qui vous ressemble.</p>
           <a class="link" href="https://adevenements.fr/dj-particulier-hauts-de-france">Découvrir →</a>
         </article>
         <article class="card" id="photobooth">
-          <div class="card__img"><img loading="lazy" src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=1000&q=80" alt="Invités qui célèbrent pendant une soirée"></div>
+          <div class="card__img"><img loading="lazy" src="images/location-photobooth-arras.jpg" alt="Borne photobooth en bois installée pour une réception"></div>
           <div class="card__top"><span class="cap card__num">04</span><span class="cap">Photobooth</span></div>
           <h3 class="serif h-sm">Borne photo en bois</h3>
           <p>Personnalisée à vos couleurs, avec tirages instantanés. Livraison, installation et reprise dans le Pas-de-Calais et les Hauts-de-France.</p>
           <a class="link" href="https://adevenements.fr/location-photobooth-hauts-de-france">Découvrir →</a>
         </article>
         <article class="card">
-          <div class="card__img"><img loading="lazy" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1000&q=80" alt="Réception décorée en soirée"></div>
+          <div class="card__img"><img loading="lazy" src="images/options-artifices.jpg" alt="Étincelle d'artifice dans la nuit"></div>
           <div class="card__top"><span class="cap card__num">05</span><span class="cap">Sur mesure</span></div>
           <h3 class="serif h-sm">Options & services</h3>
           <p>Videobooth, artifices, sonorisation, décoration et mobilier, musiciens, vidéaste, photographe, traiteur, serveurs, barman, food trucks.</p>
@@ -338,7 +387,7 @@ p{max-width:44ch;color:var(--espresso)}
   <!-- ATMOSPHERE -->
   <section class="atmos" aria-label="Ambiance">
     <div class="atmos__sticky">
-      <div class="atmos__frame"><img loading="lazy" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=2400&q=80" alt="Jeux de lumière au-dessus d'une piste de danse"></div>
+      <div class="atmos__frame"><img loading="lazy" src="images/ambiance-eclairage-soiree.jpg" alt="Piste de danse sous les lyres lumineuses"></div>
       <div class="atmos__txt">
         <span class="cap">Son &amp; lumière haut de gamme</span>
         <h2 class="serif display" data-lines><span class="line"><span>Le son,</span></span><span class="line"><span>la lumière,</span></span><span class="line"><span>l'émotion.</span></span></h2>
@@ -379,30 +428,67 @@ p{max-width:44ch;color:var(--espresso)}
       <li><span class="cap">Arras</span><span class="h-xs">One Events Live</span></li>
       <li><span class="cap">Anzin-Saint-Aubin</span><span class="h-xs">Hôtel Le Fairway</span></li>
       <li><span class="cap">Loisirs</span><span class="h-xs">Base nautique du Val Joly</span></li>
-      <li><span class="cap">Et vous&nbsp;?</span><a class="link" href="#contact">Votre événement →</a></li>
+      <li><span class="cap">Et vous&nbsp;?</span><a class="link" href="#devis">Votre événement →</a></li>
     </ul>
   </section>
 
-  <!-- CTA -->
+  <!-- CONTACT + DEVIS -->
   <section class="cta" id="contact">
-    <div class="cta__media"><img loading="lazy" data-speed="15" src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=2400&q=80" alt=""></div>
+    <div class="cta__media"><img loading="lazy" data-speed="15" src="images/contact-salle-reception.jpg" alt=""></div>
     <div class="cta__inner">
-      <span class="cap" style="color:var(--parchment)">(05) Contact</span>
-      <h2 class="serif display" data-lines><span class="line"><span>Parlons de</span></span><span class="line"><span>votre événement</span></span></h2>
-      <div class="cta__actions">
-        <a class="btn btn--light" data-magnetic href="https://adevenements.fr/devis"><span>Demander un devis gratuit</span></a>
-        <a class="link" href="tel:+33677493859">Appeler →</a>
+      <div class="cta__lead">
+        <span class="cap" style="color:var(--parchment)">(05) Contact &amp; devis</span>
+        <h2 class="serif display" data-lines><span class="line"><span>Parlons de</span></span><span class="line"><span>votre événement</span></span></h2>
+        <p>Décrivez votre projet en quelques lignes : nous revenons vers vous sous 48&nbsp;h avec un devis gratuit et sans engagement.</p>
+        <div class="cta__contacts">
+          <div><div class="cap">Téléphone</div><a href="tel:+33677493859">06 77 49 38 59</a></div>
+          <div><div class="cap">E-mail</div><a href="mailto:contact@adevenements.fr">contact@adevenements.fr</a></div>
+          <div><div class="cap">Zone d'intervention</div><span>Arras · Lille · Hauts-de-France</span></div>
+        </div>
       </div>
-      <div class="cta__contacts">
-        <div><div class="cap">Téléphone</div><a href="tel:+33677493859">06 77 49 38 59</a></div>
-        <div><div class="cap">E-mail</div><a href="mailto:contact@adevenements.fr">contact@adevenements.fr</a></div>
-        <div><div class="cap">Zone d'intervention</div><span>Arras · Hauts-de-France</span></div>
-      </div>
+
+      <form class="devis__form" id="devis" action="https://formsubmit.co/contact@adevenements.fr" method="POST" aria-label="Demande de devis gratuit">
+        <!-- anti-spam: real visitors never fill this hidden field -->
+        <input type="text" name="_honey" class="devis__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="_subject" value="Nouvelle demande de devis — site AD Événements">
+        <input type="hidden" name="_template" value="table">
+
+        <label class="field"><span class="cap">Nom et prénom *</span><input name="Nom" required autocomplete="name"></label>
+        <label class="field"><span class="cap">Téléphone *</span><input type="tel" name="Téléphone" required autocomplete="tel" pattern="[0-9+ .()\-]{10,}" title="Au moins 10 chiffres"></label>
+        <label class="field devis__full"><span class="cap">E-mail *</span><input type="email" name="email" required autocomplete="email"></label>
+        <label class="field"><span class="cap">Type d'événement *</span>
+          <select name="Type d'événement" required>
+            <option value="">Choisir…</option>
+            <option>Mariage</option><option>Événement d'entreprise</option><option>Anniversaire</option>
+            <option>Baptême / communion</option><option>Soirée privée</option><option>Autre</option>
+          </select>
+        </label>
+        <label class="field"><span class="cap">Date *</span><input type="date" name="Date" required></label>
+        <label class="field devis__full"><span class="cap">Ville / lieu *</span><input name="Lieu" required placeholder="Arras, Lille…"></label>
+
+        <fieldset class="chips devis__full">
+          <legend class="cap">Prestations souhaitées</legend>
+          <label><input type="checkbox" name="Prestations" value="DJ"><span>DJ</span></label>
+          <label><input type="checkbox" name="Prestations" value="Photobooth"><span>Photobooth</span></label>
+          <label><input type="checkbox" name="Prestations" value="Videobooth"><span>Videobooth</span></label>
+          <label><input type="checkbox" name="Prestations" value="Sonorisation"><span>Sonorisation</span></label>
+          <label><input type="checkbox" name="Prestations" value="Artifices"><span>Artifices</span></label>
+          <label><input type="checkbox" name="Prestations" value="Autre"><span>Autre</span></label>
+        </fieldset>
+
+        <label class="field devis__full"><span class="cap">Votre message</span><textarea name="Message" rows="3" placeholder="Nombre d'invités, horaires, ambiance souhaitée…"></textarea></label>
+
+        <div class="devis__foot devis__full">
+          <p class="devis__note">* Champs obligatoires. Vos informations servent uniquement à vous répondre.</p>
+          <button class="btn btn--light" data-magnetic type="submit"><span>Demander mon devis gratuit</span></button>
+        </div>
+        <p class="devis__status devis__full" role="status" aria-live="polite"></p>
+      </form>
     </div>
     <footer class="footer">
       <span>© <span id="year"></span> AD Événements — Arras</span>
       <nav aria-label="Pied de page">
-        <a href="#prestations">Prestations</a><a href="#photobooth">Photobooth</a><a href="#options">Options</a><a href="https://adevenements.fr/devis">Devis</a>
+        <a href="#prestations">Prestations</a><a href="#photobooth">Photobooth</a><a href="#options">Options</a><a href="#devis">Devis</a>
       </nav>
     </footer>
   </section>
@@ -430,6 +516,33 @@ function toggleMenu(open) {
 burger.addEventListener('click', () => toggleMenu(!document.body.classList.contains('menu-open')));
 $('.mmenu a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
 matchMedia('(min-width: 961px)').addEventListener('change', e => e.matches && document.body.classList.contains('menu-open') && toggleMenu(false));
+
+// ---------- Devis form: sent by e-mail through FormSubmit (no server needed) ----------
+const devisForm = document.getElementById('devis');
+const devisStatus = devisForm.querySelector('.devis__status');
+const today = new Date(Date.now() - new Date().getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+devisForm.querySelector('[type=date]').min = today; // no event date in the past
+devisForm.addEventListener('submit', async e => {
+  e.preventDefault();
+  if (!devisForm.reportValidity()) return;
+  const btn = devisForm.querySelector('[type=submit]');
+  const say = (msg, ok) => { devisStatus.textContent = msg; devisStatus.className = 'devis__status ' + (ok ? 'is-ok' : 'is-err'); };
+  const data = {};
+  for (const [k, v] of new FormData(devisForm)) data[k] = data[k] ? data[k] + ', ' + v : v; // join multiple checkboxes
+  if (data._honey) { devisForm.reset(); return say('Merci, votre demande a bien été envoyée.', true); } // bot: pretend success
+  btn.disabled = true; say('Envoi en cours…', true);
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/contact@adevenements.fr', {
+      method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data)
+    });
+    const json = await res.json().catch(() => ({}));
+    if (!res.ok || String(json.success) !== 'true') throw new Error(json.message || res.status);
+    devisForm.reset();
+    say('Merci ! Votre demande a bien été envoyée. Nous vous répondons sous 48 h.', true);
+  } catch (err) {
+    say("L'envoi n'a pas abouti. Réessayez, ou appelez-nous au 06 77 49 38 59.", false);
+  } finally { btn.disabled = false; }
+});
 
 if (reduce || !window.gsap || !window.ScrollTrigger) {
   $('.reveal-img').forEach(e => e.style.clipPath = 'none');
@@ -477,6 +590,7 @@ if (reduce || !window.gsap || !window.ScrollTrigger) {
     const pastHero = scrollY > innerHeight * .9;
     const ctaTop = document.querySelector('.cta').getBoundingClientRect().top;
     nav.classList.toggle('is-solid', pastHero && ctaTop > 60);
+    nav.classList.toggle('is-dark', ctaTop <= 60); // dark bar so it never floats over the form
     nav.querySelector('.btn').classList.toggle('btn--dark', nav.classList.contains('is-solid'));
     nav.querySelector('.btn').classList.toggle('btn--light', !nav.classList.contains('is-solid'));
   };
