@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AD Événements — DJ, Photobooth & Événementiel · Arras, Hauts-de-France</title>
+<meta name="description" content="AD Événements, agence événementielle à Arras : DJ mariage, entreprise et particulier, location de photobooth, sonorisation, artifices et décoration dans les Hauts-de-France.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parchment:#d8cbb8; --linen:#bfb4a3; --stone:#b6ab9c; --walnut:#978e81;
+  --espresso:#615b53; --onyx:#2c2c2c; --roast:#292622; --saffron:#d49653;
+  --serif:'TT Ramillas Variable','Cormorant Garamond',Georgia,serif;
+  --sans:'Satoshi','DM Sans',ui-sans-serif,system-ui,sans-serif;
+  --ease:cubic-bezier(.25,.46,.45,.94);
+  --gut:clamp(16px,3vw,42px);
+  --sec:clamp(88px,11vw,160px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--parchment);color:var(--onyx);font:500 14px/1.4 var(--sans);letter-spacing:-.01em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.menu-open{overflow:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover;filter:sepia(.22) saturate(.85) brightness(.92)}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--onyx);color:var(--parchment)}
+:focus-visible{outline:1px solid var(--saffron);outline-offset:4px}
+
+/* ---------- type ---------- */
+.serif{font-family:var(--serif);font-weight:300;text-transform:uppercase}
+.display{font-size:clamp(52px,8vw,115px);line-height:.8;letter-spacing:-.04em}
+.h-lg{font-size:clamp(42px,4.8vw,69px);line-height:.9;letter-spacing:-.04em}
+.h-sm{font-size:clamp(34px,3.5vw,50px);line-height:.9;letter-spacing:-.03em}
+.h-xs{font-size:26px;line-height:1.2;letter-spacing:-.006em}
+.cap{font:500 12px/1.3 var(--sans);text-transform:uppercase;letter-spacing:-.012em;color:var(--walnut)}
+.body-lg{font:500 clamp(18px,1.9vw,26px)/1.2 var(--sans);letter-spacing:-.006em;color:var(--espresso);max-width:30ch}
+p{max-width:44ch;color:var(--espresso)}
+.line{display:block;overflow:hidden;padding-top:.12em;margin-top:-.12em;padding-bottom:.04em}
+.line>span{display:block}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:12px;padding:20px 28px;border:1px solid currentColor;border-radius:3px;font:500 14px/1 var(--sans);text-transform:uppercase;letter-spacing:-.01em;position:relative;overflow:hidden;isolation:isolate;transition:color .4s var(--ease)}
+.btn::before{content:"";position:absolute;inset:0;background:currentColor;transform:scaleY(0);transform-origin:bottom;transition:transform .4s var(--ease);z-index:-1}
+.btn span{transition:color .4s var(--ease)}
+.btn:hover::before{transform:scaleY(1)}
+.btn--light{color:var(--parchment)} .btn--light:hover span{color:var(--roast)}
+.btn--dark{color:var(--onyx)} .btn--dark:hover span{color:var(--parchment)}
+.link{font:500 13px/1 var(--sans);text-transform:uppercase;display:inline-flex;gap:8px;align-items:center;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;padding-bottom:4px;transition:background-size .4s var(--ease)}
+.link:hover{background-size:100% 1px}
+
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px var(--gut);color:var(--parchment);transition:color .4s var(--ease),background-color .4s var(--ease),padding .4s var(--ease)}
+.nav.is-solid{background:var(--parchment);color:var(--onyx);padding-block:14px;border-bottom:1px solid var(--stone)}
+.nav__logo{display:flex;align-items:center;gap:10px;font:700 15px/1 var(--sans);letter-spacing:-.02em}
+.nav__mark{width:34px;height:34px;border:1px solid currentColor;border-radius:3px;display:grid;place-items:center;font:300 18px/1 var(--serif)}
+.nav__links{display:flex;gap:28px;list-style:none}
+.nav__links a{font:500 14px/1 var(--sans);text-transform:uppercase;letter-spacing:-.01em;position:relative}
+.nav__links a::after{content:"";position:absolute;left:0;bottom:-6px;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.nav__links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav__right{display:flex;align-items:center;gap:20px}
+.nav__tel{font:500 13px/1 var(--sans)}
+.nav .btn{padding:14px 18px;font-size:13px}
+.nav.is-solid .btn:hover span{color:var(--parchment)}
+.burger{display:none;width:44px;height:44px;border:1px solid currentColor;border-radius:3px;background:none;color:inherit;cursor:pointer;position:relative}
+.burger i{position:absolute;left:12px;right:12px;height:1px;background:currentColor;transition:transform .4s var(--ease)}
+.burger i:first-child{top:18px}.burger i:last-child{top:25px}
+.menu-open .burger i:first-child{transform:translateY(3.5px) rotate(45deg)}
+.menu-open .burger i:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+.mmenu{position:fixed;inset:0;z-index:40;background:var(--roast);color:var(--parchment);padding:110px var(--gut) var(--gut);display:flex;flex-direction:column;justify-content:space-between;clip-path:inset(0 0 100% 0);visibility:hidden}
+.mmenu ul{list-style:none}
+.mmenu li{border-bottom:1px solid rgba(216,203,184,.18)}
+.mmenu a.serif{display:block;font-size:clamp(40px,11vw,65px);line-height:1;letter-spacing:-.04em;padding:14px 0}
+.menu-open .nav{color:var(--parchment);background:transparent;border-color:transparent}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:100svh;min-height:560px;overflow:hidden;background:var(--roast);color:var(--parchment)}
+.hero__media{position:absolute;inset:0}
+.hero__media img{transform-origin:center}
+.hero__shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(41,38,34,.55) 0%,rgba(41,38,34,.15) 40%,rgba(41,38,34,.85) 100%)}
+.hero__inner{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 var(--gut) clamp(24px,4vw,42px)}
+.hero__meta{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:clamp(16px,2vw,28px)}
+.hero__meta .cap{color:var(--parchment)}
+.hero__tag{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:clamp(26px,3.2vw,42px);line-height:1;letter-spacing:-.03em;max-width:14ch}
+.hero img,.atmos img,.cta img{filter:grayscale(1) sepia(.45) brightness(.78) contrast(1.05)} /* warm monochrome grade keeps any placeholder on-palette */
+.wordmark{font:500 clamp(48px,11.4vw,199px)/.8 var(--sans);letter-spacing:-.016em;text-transform:uppercase;white-space:nowrap;display:flex;justify-content:space-between;gap:.2em}
+.wordmark .wm{display:flex;overflow:hidden;padding-top:.1em}
+.wordmark .c{display:inline-block}
+.hero__foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(216,203,184,.25);margin-top:clamp(18px,2vw,28px);padding-top:16px}
+.scrollcue{display:flex;align-items:center;gap:12px}
+.scrollcue i{width:1px;height:28px;background:rgba(216,203,184,.3);position:relative;overflow:hidden}
+.scrollcue i::after{content:"";position:absolute;left:0;top:-100%;width:1px;height:100%;background:var(--saffron);animation:cue 2s var(--ease) infinite}
+@keyframes cue{to{top:100%}}
+
+/* ---------- sections ---------- */
+.sec{padding:var(--sec) var(--gut)}
+.rule{height:1px;background:var(--stone);transform-origin:left}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:clamp(42px,6vw,92px)}
+
+/* manifesto */
+.manifesto__grid{display:grid;grid-template-columns:1fr 2.2fr;gap:clamp(24px,4vw,92px);margin-top:28px}
+.manifesto__text{font-size:clamp(38px,5.6vw,82px);line-height:.92;letter-spacing:-.04em}
+.manifesto__text .w{display:inline-block}
+.about{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:clamp(64px,10vw,160px);align-items:end}
+.about__img1{grid-column:1/6;aspect-ratio:4/5;overflow:hidden}
+.about__img2{grid-column:7/10;aspect-ratio:3/4;overflow:hidden;align-self:start}
+.about__txt{grid-column:10/13;display:flex;flex-direction:column;gap:20px;padding-bottom:12px}
+.about img{height:120%;margin-top:-10%}
+.reveal-img{clip-path:inset(100% 0 0 0)}
+
+/* services horizontal */
+.services{background:var(--linen);overflow:hidden}
+.services__pin{height:100svh;display:flex;flex-direction:column;justify-content:center;padding:96px 0 var(--gut)}
+.services .card{gap:12px}
+.services__head{padding:0 var(--gut);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:clamp(28px,4vh,56px)}
+.services__track{display:flex;gap:16px;padding:0 var(--gut);width:max-content}
+.card{width:clamp(300px,30vw,440px);display:flex;flex-direction:column;gap:16px}
+.card__img{aspect-ratio:4/5;max-height:38vh;overflow:hidden;position:relative}
+.card__img img{transition:scale 1.2s var(--ease)} /* hover uses `scale`, not `transform`, so it never fights GSAP */
+.card:hover .card__img img{scale:1.06}
+.card__top{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--stone);padding-top:12px}
+.card__num{transition:color .4s var(--ease)}
+.card:hover .card__num{color:var(--saffron)}
+.card p{font-size:14px}
+.services__progress{margin:clamp(28px,4vh,48px) var(--gut) 0;height:1px;background:var(--stone);position:relative}
+.services__progress i{position:absolute;inset:0;background:var(--onyx);transform:scaleX(0);transform-origin:left}
+
+/* marquee */
+.marquee{border-block:1px solid var(--stone);padding:28px 0;overflow:hidden;white-space:nowrap}
+.marquee__track{display:inline-flex;animation:marquee 27s linear infinite}
+.marquee:hover .marquee__track{animation-play-state:paused}
+.marquee span{font-size:clamp(42px,6vw,92px);line-height:1;letter-spacing:-.04em;padding:0 .35em;display:inline-flex;align-items:center;gap:.7em}
+.marquee span::after{content:"";width:.12em;height:.12em;border:1px solid var(--walnut);transform:rotate(45deg)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* atmosphere */
+.atmos{position:relative;height:120svh;background:var(--parchment)}
+.atmos__sticky{position:sticky;top:0;height:100svh;overflow:hidden}
+.atmos__frame{position:absolute;inset:0;clip-path:inset(14% 18% 14% 18%)}
+.atmos__frame img{transform:scale(1.25)}
+.atmos__frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(41,38,34,.25),rgba(41,38,34,.75))}
+.atmos__txt{position:absolute;inset:0;z-index:2;color:var(--parchment);padding:var(--gut);display:flex;flex-direction:column;justify-content:flex-end;gap:24px}
+.atmos__txt .cap{color:var(--parchment)}
+
+/* strengths */
+.why__list{list-style:none}
+.why__row{display:grid;grid-template-columns:80px 1.4fr 1fr;gap:24px;padding:28px 0;align-items:baseline;position:relative}
+.why__row .rule{position:absolute;top:0;left:0;right:0}
+.why__row .h-sm{transition:translate .5s var(--ease)} /* `translate`, not `transform`: GSAP owns transform */
+.why__row:hover .h-sm{translate:16px 0}
+
+/* clients */
+.clients{background:var(--parchment)}
+.clients__grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--stone);border-left:1px solid var(--stone)}
+.clients__grid li{list-style:none;border-right:1px solid var(--stone);border-bottom:1px solid var(--stone);min-height:150px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;transition:background-color .4s var(--ease)}
+.clients__grid li:hover{background:var(--linen)}
+.clients__grid .h-xs{font-family:var(--serif);text-transform:uppercase}
+
+/* cta */
+.cta{position:relative;min-height:100svh;color:var(--parchment);background:var(--roast);overflow:hidden;display:flex;flex-direction:column}
+.cta__media{position:absolute;inset:-10% 0;opacity:.45}
+.cta__inner{position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;padding:var(--sec) var(--gut) 42px;gap:42px}
+.cta__actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.cta__contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;border-top:1px solid rgba(216,203,184,.25);padding-top:24px}
+.cta__contacts .cap{color:var(--walnut);margin-bottom:8px}
+.cta__contacts a,.cta__contacts div>span{font:500 clamp(18px,1.9vw,26px)/1.2 var(--sans);letter-spacing:-.01em}
+.cta .link{color:var(--parchment)}
+.footer{position:relative;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px var(--gut);border-top:1px solid rgba(216,203,184,.15);color:var(--walnut);font-size:12px;text-transform:uppercase}
+.footer nav{display:flex;gap:20px;flex-wrap:wrap}
+.footer a:hover{color:var(--parchment)}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .nav__links,.nav__tel,.nav .btn{display:none}
+  .burger{display:block}
+  .manifesto__grid{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr 1fr}
+  .about__img1{grid-column:1/3}
+  .about__img2{grid-column:1/2}
+  .about__txt{grid-column:2/3;align-self:end}
+  .services__pin{height:auto;padding:var(--sec) 0}
+  .services__track{flex-direction:column;width:auto;gap:56px}
+  .card{width:100%}
+  .card__img{max-height:none}
+  .services__progress{display:none}
+  .why__row{grid-template-columns:48px 1fr;}
+  .why__row p{grid-column:2}
+  .clients__grid{grid-template-columns:repeat(2,1fr)}
+  .cta__contacts{grid-template-columns:1fr}
+  .sec-head{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:560px){
+  .hero__meta{flex-direction:column;align-items:flex-start}
+  .wordmark{flex-direction:column;font-size:15.5vw;gap:0}
+  .about{grid-template-columns:1fr}
+  .about__img1,.about__img2,.about__txt{grid-column:1/-1}
+  .atmos__frame{clip-path:inset(10% 6% 10% 6%)}
+  .clients__grid li{min-height:120px}
+}
+@media (prefers-reduced-motion:reduce){
+  .marquee__track,.scrollcue i::after{animation:none}
+  html{scroll-behavior:auto}
+  .reveal-img{clip-path:none}
+  .atmos__frame{clip-path:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#top" class="nav__logo" aria-label="AD Événements — accueil"><span class="nav__mark">AD</span><span>Événements</span></a>
+  <ul class="nav__links">
+    <li><a href="#prestations">Prestations</a></li>
+    <li><a href="#photobooth">Photobooth</a></li>
+    <li><a href="#options">Options</a></li>
+    <li><a href="#agence">L'agence</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav__right">
+    <a class="nav__tel" href="tel:+33677493859">06 77 49 38 59</a>
+    <a class="btn btn--light" href="#contact"><span>Devis gratuit</span></a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mmenu"><i></i><i></i></button>
+  </div>
+</header>
+
+<nav class="mmenu" id="mmenu" aria-label="Menu mobile">
+  <ul>
+    <li><a class="serif" href="#prestations">Prestations</a></li>
+    <li><a class="serif" href="#photobooth">Photobooth</a></li>
+    <li><a class="serif" href="#options">Options</a></li>
+    <li><a class="serif" href="#agence">L'agence</a></li>
+    <li><a class="serif" href="#contact">Contact</a></li>
+  </ul>
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <a class="link" href="tel:+33677493859">06 77 49 38 59</a>
+    <a class="link" href="mailto:contact@adevenements.fr">contact@adevenements.fr</a>
+  </div>
+</nav>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" aria-label="Accueil">
+    <div class="hero__media"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=2400&q=80" alt="Platines d'un DJ sous un éclairage tamisé"></div>
+    <div class="hero__shade"></div>
+    <div class="hero__inner">
+      <div class="hero__meta">
+        <h2 class="hero__tag" data-hero-fade>Créons des moments inoubliables</h2>
+        <span class="cap" data-hero-fade>DJ · Photobooth · Événementiel<br>Arras — Hauts-de-France</span>
+      </div>
+      <h1 class="wordmark" aria-label="AD Événements">
+        <span class="wm" aria-hidden="true">AD</span>
+        <span class="wm" aria-hidden="true">Événements</span>
+      </h1>
+      <div class="hero__foot" data-hero-fade>
+        <span class="scrollcue cap" style="color:var(--parchment)"><i></i>Découvrir</span>
+        <a class="link" style="color:var(--parchment)" href="#contact">Demander un devis →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO + ABOUT -->
+  <section class="sec" id="agence">
+    <div class="rule" data-rule></div>
+    <div class="manifesto__grid">
+      <span class="cap">(01) L'agence</span>
+      <p class="manifesto__text serif" data-words>Une agence événementielle qui compose chaque soirée comme une partition&nbsp;: le son, la lumière, et l'émotion juste.</p>
+    </div>
+    <div class="about">
+      <div class="about__img1 reveal-img"><img loading="lazy" data-speed="-12" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1400&q=80" alt="Table de réception dressée pour un mariage"></div>
+      <div class="about__img2 reveal-img"><img loading="lazy" data-speed="12" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1000&q=80" alt="Décoration lumineuse d'une salle de réception"></div>
+      <div class="about__txt">
+        <span class="cap">Basés à Arras</span>
+        <p class="body-lg" data-fade>DJ, photobooth et organisation d'événements dans tous les Hauts-de-France.</p>
+        <p data-fade>Depuis plusieurs années, notre équipe passionnée accompagne mariages, soirées privées et événements d'entreprise. Un matériel son et lumière haut de gamme, des ambiances sur mesure et un conseil personnalisé, du premier échange à la dernière danse.</p>
+        <a class="link" href="#contact" data-fade>Parler de votre projet →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="prestations">
+    <div class="services__pin">
+      <div class="services__head">
+        <h2 class="serif h-lg" data-lines><span class="line"><span>Nos</span></span><span class="line"><span>prestations</span></span></h2>
+        <span class="cap">(02) — Faites défiler</span>
+      </div>
+      <div class="services__track">
+        <article class="card">
+          <div class="card__img"><img loading="lazy" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1000&q=80" alt="Mariés lors de leur réception"></div>
+          <div class="card__top"><span class="cap card__num">01</span><span class="cap">Mariage</span></div>
+          <h3 class="serif h-sm">DJ Mariage</h3>
+          <p>Le DJ est un pilier de la réussite d'un mariage. Nous coordonnons chaque temps fort de votre journée, du vin d'honneur à la dernière danse.</p>
+          <a class="link" href="https://adevenements.fr/dj-mariage-hauts-de-france">Découvrir →</a>
+        </article>
+        <article class="card">
+          <div class="card__img"><img loading="lazy" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1000&q=80" alt="Salle de conférence éclairée"></div>
+          <div class="card__top"><span class="cap card__num">02</span><span class="cap">Entreprise</span></div>
+          <h3 class="serif h-sm">Événements professionnels</h3>
+          <p>Conférences, séminaires, galas, lancements de produit&nbsp;: une ambiance sonore maîtrisée, à l'image de votre marque.</p>
+          <a class="link" href="https://adevenements.fr/dj-evenement-professionnel-hauts-de-france">Découvrir →</a>
+        </article>
+        <article class="card">
+          <div class="card__img"><img loading="lazy" src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1000&q=80" alt="Décoration de fête privée"></div>
+          <div class="card__top"><span class="cap card__num">03</span><span class="cap">Particulier</span></div>
+          <h3 class="serif h-sm">Soirées privées</h3>
+          <p>Anniversaires, crémaillères, baptêmes, communions et réceptions privées&nbsp;: une soirée qui vous ressemble.</p>
+          <a class="link" href="https://adevenements.fr/dj-particulier-hauts-de-france">Découvrir →</a>
+        </article>
+        <article class="card" id="photobooth">
+          <div class="card__img"><img loading="lazy" src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=1000&q=80" alt="Invités qui célèbrent pendant une soirée"></div>
+          <div class="card__top"><span class="cap card__num">04</span><span class="cap">Photobooth</span></div>
+          <h3 class="serif h-sm">Borne photo en bois</h3>
+          <p>Personnalisée à vos couleurs, avec tirages instantanés. Livraison, installation et reprise dans le Pas-de-Calais et les Hauts-de-France.</p>
+          <a class="link" href="https://adevenements.fr/location-photobooth-hauts-de-france">Découvrir →</a>
+        </article>
+        <article class="card">
+          <div class="card__img"><img loading="lazy" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1000&q=80" alt="Réception décorée en soirée"></div>
+          <div class="card__top"><span class="cap card__num">05</span><span class="cap">Sur mesure</span></div>
+          <h3 class="serif h-sm">Options & services</h3>
+          <p>Videobooth, artifices, sonorisation, décoration et mobilier, musiciens, vidéaste, photographe, traiteur, serveurs, barman, food trucks.</p>
+          <a class="link" href="https://adevenements.fr/services-evenementiels-dj-hauts-de-france">Découvrir →</a>
+        </article>
+      </div>
+      <div class="services__progress"><i></i></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" id="options" aria-label="Options : Videobooth, Artifices, Sonorisation, Décoration, Mobilier, Musiciens, Photographe, Vidéaste, Traiteur, Barman, Food trucks">
+    <div class="marquee__track serif" aria-hidden="true">
+      <span>Videobooth</span><span>Artifices</span><span>Sonorisation</span><span>Décoration</span><span>Mobilier</span><span>Musiciens</span><span>Photographe</span><span>Vidéaste</span><span>Traiteur</span><span>Barman</span><span>Food trucks</span>
+      <span>Videobooth</span><span>Artifices</span><span>Sonorisation</span><span>Décoration</span><span>Mobilier</span><span>Musiciens</span><span>Photographe</span><span>Vidéaste</span><span>Traiteur</span><span>Barman</span><span>Food trucks</span>
+    </div>
+  </div>
+
+  <!-- ATMOSPHERE -->
+  <section class="atmos" aria-label="Ambiance">
+    <div class="atmos__sticky">
+      <div class="atmos__frame"><img loading="lazy" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=2400&q=80" alt="Jeux de lumière au-dessus d'une piste de danse"></div>
+      <div class="atmos__txt">
+        <span class="cap">Son &amp; lumière haut de gamme</span>
+        <h2 class="serif display" data-lines><span class="line"><span>Le son,</span></span><span class="line"><span>la lumière,</span></span><span class="line"><span>l'émotion.</span></span></h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="sec">
+    <div class="sec-head">
+      <h2 class="serif h-lg" data-lines><span class="line"><span>Pourquoi</span></span><span class="line"><span>nous choisir</span></span></h2>
+      <span class="cap">(03) Nos engagements</span>
+    </div>
+    <ol class="why__list">
+      <li class="why__row"><i class="rule" data-rule></i><span class="cap">01</span><h3 class="serif h-sm">DJ professionnels expérimentés</h3><p>Des DJ qui lisent la piste et savent faire monter l'énergie au bon moment.</p></li>
+      <li class="why__row"><i class="rule" data-rule></i><span class="cap">02</span><h3 class="serif h-sm">Prestations sur mesure</h3><p>Chaque événement est unique&nbsp;: playlist, déroulé et ambiance construits avec vous.</p></li>
+      <li class="why__row"><i class="rule" data-rule></i><span class="cap">03</span><h3 class="serif h-sm">Conseil personnalisé</h3><p>Un interlocuteur dédié qui vous guide, du premier appel au jour J.</p></li>
+      <li class="why__row"><i class="rule" data-rule></i><span class="cap">04</span><h3 class="serif h-sm">Une équipe réactive</h3><p>Passionnée, disponible et attentive à chaque détail.</p></li>
+      <li class="why__row"><i class="rule" data-rule></i><span class="cap">05</span><h3 class="serif h-sm">Matériel haut de gamme</h3><p>Son et lumière professionnels pour un rendu à la hauteur de votre événement.</p></li>
+    </ol>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="sec clients" style="padding-top:0">
+    <div class="sec-head">
+      <h2 class="serif h-lg" data-lines><span class="line"><span>Ils nous ont</span></span><span class="line"><span>fait confiance</span></span></h2>
+      <span class="cap">(04) Références</span>
+    </div>
+    <ul class="clients__grid" data-stagger>
+      <li><span class="cap">Marque</span><span class="h-xs">Red Bull</span></li>
+      <li><span class="cap">Hôtellerie</span><span class="h-xs">Carlton Cannes</span></li>
+      <li><span class="cap">Luxe</span><span class="h-xs">Bulgari</span></li>
+      <li><span class="cap">Marque</span><span class="h-xs">Coca-Cola</span></li>
+      <li><span class="cap">Hôtellerie</span><span class="h-xs">Club Med</span></li>
+      <li><span class="cap">Automobile</span><span class="h-xs">Porsche</span></li>
+      <li><span class="cap">Festival</span><span class="h-xs">Greenway Festival</span></li>
+      <li><span class="cap">Lille</span><span class="h-xs">One Stage Audiovisuel</span></li>
+      <li><span class="cap">Arras</span><span class="h-xs">One Events Live</span></li>
+      <li><span class="cap">Anzin-Saint-Aubin</span><span class="h-xs">Hôtel Le Fairway</span></li>
+      <li><span class="cap">Loisirs</span><span class="h-xs">Base nautique du Val Joly</span></li>
+      <li><span class="cap">Et vous&nbsp;?</span><a class="link" href="#contact">Votre événement →</a></li>
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="cta__media"><img loading="lazy" data-speed="15" src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=2400&q=80" alt=""></div>
+    <div class="cta__inner">
+      <span class="cap" style="color:var(--parchment)">(05) Contact</span>
+      <h2 class="serif display" data-lines><span class="line"><span>Parlons de</span></span><span class="line"><span>votre événement</span></span></h2>
+      <div class="cta__actions">
+        <a class="btn btn--light" data-magnetic href="https://adevenements.fr/devis"><span>Demander un devis gratuit</span></a>
+        <a class="link" href="tel:+33677493859">Appeler →</a>
+      </div>
+      <div class="cta__contacts">
+        <div><div class="cap">Téléphone</div><a href="tel:+33677493859">06 77 49 38 59</a></div>
+        <div><div class="cap">E-mail</div><a href="mailto:contact@adevenements.fr">contact@adevenements.fr</a></div>
+        <div><div class="cap">Zone d'intervention</div><span>Arras · Hauts-de-France</span></div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span>© <span id="year"></span> AD Événements — Arras</span>
+      <nav aria-label="Pied de page">
+        <a href="#prestations">Prestations</a><a href="#photobooth">Photobooth</a><a href="#options">Options</a><a href="https://adevenements.fr/devis">Devis</a>
+      </nav>
+    </footer>
+  </section>
+</main>
+
+<!-- self-hosted: gsap 3.12.5, ScrollTrigger 3.12.5 -->
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $ = (s, c = document) => [...c.querySelectorAll(s)];
+
+// Mobile menu (works with or without motion)
+const burger = document.querySelector('.burger'), mmenu = document.getElementById('mmenu');
+function toggleMenu(open) {
+  document.body.classList.toggle('menu-open', open);
+  burger.setAttribute('aria-expanded', open);
+  burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+  if (window.gsap && !reduce) {
+    gsap.to(mmenu, { clipPath: open ? 'inset(0 0 0% 0)' : 'inset(0 0 100% 0)', autoAlpha: open ? 1 : 0, duration: .8, ease: 'expo.inOut' });
+    if (open) gsap.from($('.mmenu li'), { y: 40, opacity: 0, stagger: .06, delay: .3, duration: .8, ease: 'expo.out' });
+  } else { mmenu.style.clipPath = open ? 'none' : ''; mmenu.style.visibility = open ? 'visible' : 'hidden'; }
+}
+burger.addEventListener('click', () => toggleMenu(!document.body.classList.contains('menu-open')));
+$('.mmenu a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+matchMedia('(min-width: 961px)').addEventListener('change', e => e.matches && document.body.classList.contains('menu-open') && toggleMenu(false));
+
+if (reduce || !window.gsap || !window.ScrollTrigger) {
+  $('.reveal-img').forEach(e => e.style.clipPath = 'none');
+} else {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Split wordmark into chars, manifesto into words
+  $('.wordmark .wm').forEach(el => el.innerHTML = [...el.textContent].map(c => `<span class="c">${c}</span>`).join(''));
+  $('[data-words]').forEach(el => {
+    el.setAttribute('aria-label', el.textContent);
+    el.innerHTML = el.textContent.trim().split(/\s+/).map(w => `<span class="w" aria-hidden="true">${w}</span>`).join(' ');
+  });
+
+  // ---------- Intro ----------
+  const heroImg = document.querySelector('.hero__media img');
+  gsap.set('.wordmark .c', { yPercent: 110 });
+  gsap.set('[data-hero-fade]', { opacity: 0, y: 20 });
+  gsap.set('.nav', { opacity: 0, y: -20 });
+  gsap.set(heroImg, { scale: 1.35 });
+  gsap.set('.hero__media', { clipPath: 'inset(50% 50% 50% 50%)' });
+
+  // Start as soon as fonts + hero image are ready, never wait more than 1.5s
+  Promise.race([
+    Promise.all([document.fonts.ready, heroImg.decode().catch(() => {})]),
+    new Promise(r => setTimeout(r, 1500))
+  ]).then(() => {
+    gsap.timeline()
+      .to('.hero__media', { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.6, ease: 'expo.inOut' })
+      .to(heroImg, { scale: 1, duration: 2.4, ease: 'expo.out' }, '<.4')
+      .to('.wordmark .c', { yPercent: 0, duration: 1.4, stagger: .045, ease: 'expo.out' }, '-=1.6')
+      .to('[data-hero-fade]', { opacity: 1, y: 0, duration: 1.2, stagger: .12, ease: 'expo.out' }, '-=1.1')
+      .to('.nav', { opacity: 1, y: 0, duration: 1, ease: 'expo.out' }, '<');
+  });
+
+  // ---------- Hero on scroll ----------
+  const heroST = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
+  gsap.to(heroImg, { yPercent: 18, ease: 'none', scrollTrigger: heroST });
+  gsap.to('.wordmark .wm:first-child', { xPercent: -30, ease: 'none', scrollTrigger: heroST });
+  gsap.to('.wordmark .wm:last-child', { xPercent: 12, ease: 'none', scrollTrigger: heroST });
+  gsap.to('.hero__inner', { opacity: 0, ease: 'none', scrollTrigger: { ...heroST, start: 'top+=15% top' } });
+
+  // Nav turns solid after the hero, except while the dark CTA is on screen
+  const nav = document.getElementById('nav');
+  const setNav = () => {
+    const pastHero = scrollY > innerHeight * .9;
+    const ctaTop = document.querySelector('.cta').getBoundingClientRect().top;
+    nav.classList.toggle('is-solid', pastHero && ctaTop > 60);
+    nav.querySelector('.btn').classList.toggle('btn--dark', nav.classList.contains('is-solid'));
+    nav.querySelector('.btn').classList.toggle('btn--light', !nav.classList.contains('is-solid'));
+  };
+  ScrollTrigger.create({ start: 0, end: 'max', onUpdate: setNav });
+
+  // Scroll progress hairline in saffron
+  const bar = document.createElement('i');
+  bar.style.cssText = 'position:fixed;left:0;top:0;height:2px;width:100%;background:var(--saffron);transform-origin:left;transform:scaleX(0);z-index:60;pointer-events:none';
+  document.body.append(bar);
+  gsap.to(bar, { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: .3 } });
+
+  // ---------- Generic reveals ----------
+  $('[data-lines]').forEach(el => gsap.from(el.querySelectorAll('.line > span'), {
+    yPercent: 105, duration: 1.3, stagger: .1, ease: 'expo.out',
+    scrollTrigger: { trigger: el, start: 'top 85%' }
+  }));
+  $('[data-rule]').forEach(el => gsap.from(el, { scaleX: 0, duration: 1.4, ease: 'expo.inOut', scrollTrigger: { trigger: el, start: 'top 92%' } }));
+  $('[data-fade]').forEach(el => gsap.from(el, { y: 30, opacity: 0, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 90%' } }));
+  $('.reveal-img').forEach(el => gsap.to(el, { clipPath: 'inset(0% 0 0 0)', duration: 1.6, ease: 'expo.inOut', scrollTrigger: { trigger: el, start: 'top 85%' } }));
+  $('img[data-speed]').forEach(img => gsap.fromTo(img, { yPercent: -img.dataset.speed / 2 }, {
+    yPercent: img.dataset.speed / 2, ease: 'none',
+    scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true }
+  }));
+
+  // Manifesto: words light up as you read
+  gsap.fromTo('[data-words] .w', { opacity: .14 }, {
+    opacity: 1, stagger: .1, ease: 'none',
+    scrollTrigger: { trigger: '[data-words]', start: 'top 80%', end: 'bottom 45%', scrub: true }
+  });
+
+  // Why rows
+  $('.why__row').forEach(row => gsap.from(row.querySelectorAll('.cap, .h-sm, p'), {
+    y: 40, opacity: 0, duration: 1.1, stagger: .08, ease: 'expo.out',
+    scrollTrigger: { trigger: row, start: 'top 88%' }
+  }));
+
+  // Clients grid
+  gsap.from('[data-stagger] li', {
+    opacity: 0, y: 30, duration: .9, stagger: { each: .05, grid: 'auto', from: 'start' }, ease: 'expo.out',
+    scrollTrigger: { trigger: '[data-stagger]', start: 'top 85%' }
+  });
+
+  // Atmosphere: frame opens to full bleed while image settles
+  const atmosTL = gsap.timeline({ scrollTrigger: { trigger: '.atmos', start: 'top top', end: 'bottom bottom', scrub: true } })
+    .to('.atmos__frame', { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none' })
+    .to('.atmos__frame img', { scale: 1, ease: 'none' }, 0);
+
+  // ---------- Services: horizontal pinned scroll on desktop ----------
+  const mm = gsap.matchMedia();
+  mm.add('(min-width: 961px)', () => {
+    const track = document.querySelector('.services__track');
+    const dist = () => track.scrollWidth - innerWidth;
+    const tween = gsap.to(track, {
+      x: () => -dist(), ease: 'none',
+      scrollTrigger: { trigger: '.services', start: 'top top', end: () => '+=' + dist(), pin: true, scrub: 1, invalidateOnRefresh: true }
+    });
+    gsap.to('.services__progress i', { scaleX: 1, ease: 'none', scrollTrigger: { trigger: '.services', start: 'top top', end: () => '+=' + dist(), scrub: true } });
+    // Each card image drifts inside its frame as it travels across
+    $('.card__img img').forEach(img => gsap.fromTo(img, { xPercent: -8, scale: 1.15 }, {
+      xPercent: 8, ease: 'none',
+      scrollTrigger: { trigger: img.parentElement, containerAnimation: tween, start: 'left right', end: 'right left', scrub: true }
+    }));
+  });
+  mm.add('(max-width: 960px)', () => {
+    $('.card').forEach(card => gsap.from(card, { y: 60, opacity: 0, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: card, start: 'top 88%' } }));
+  });
+
+  // ---------- Micro-interactions: magnetic buttons ----------
+  if (matchMedia('(hover: hover)').matches) $('[data-magnetic]').forEach(btn => {
+    const xTo = gsap.quickTo(btn, 'x', { duration: .6, ease: 'power3' }), yTo = gsap.quickTo(btn, 'y', { duration: .6, ease: 'power3' });
+    btn.addEventListener('mousemove', e => { const r = btn.getBoundingClientRect(); xTo((e.clientX - r.left - r.width / 2) * .3); yTo((e.clientY - r.top - r.height / 2) * .4); });
+    btn.addEventListener('mouseleave', () => { xTo(0); yTo(0); });
+  });
+
+  addEventListener('load', () => ScrollTrigger.refresh());
+}
+</script>
+</body>
+</html>
