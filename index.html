@@ -3,8 +3,54 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DJ et prestations événementielles à Arras et Lille | AD Événements</title>
+<title>DJ et événementiel à Arras et Lille | AD Evenements</title>
 <meta name="description" content="DJ et prestations événementielles clé en main à Arras, Lille et dans les Hauts-de-France : mariages, entreprises, photobooth. Devis gratuit.">
+<link rel="canonical" href="https://www.adevenements.fr/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="AD Evenements">
+<meta property="og:title" content="DJ et événementiel à Arras et Lille | AD Evenements">
+<meta property="og:description" content="DJ, photobooth et animations clé en main pour mariages, entreprises et soirées privées à Arras, Lille et dans les Hauts-de-France. Devis gratuit.">
+<meta property="og:url" content="https://www.adevenements.fr/">
+<meta property="og:image" content="https://www.adevenements.fr/images/og/accueil.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Piste de danse sous des guirlandes lumineuses">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EntertainmentBusiness",
+  "@id": "https://www.adevenements.fr/#entreprise",
+  "name": "AD Evenements",
+  "url": "https://www.adevenements.fr/",
+  "telephone": "+33677493859",
+  "image": "https://www.adevenements.fr/images/og/accueil.jpg",
+  "logo": "https://www.adevenements.fr/icon-512.png",
+  "description": "Agence DJ et prestations événementielles à Arras : mariages, événements d'entreprise, soirées privées, photobooth et options.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "16 rue des Capucins",
+    "postalCode": "62000",
+    "addressLocality": "Arras",
+    "addressRegion": "Hauts-de-France",
+    "addressCountry": "FR"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Arras" },
+    { "@type": "City", "name": "Lille" },
+    { "@type": "AdministrativeArea", "name": "Hauts-de-France" }
+  ],
+  "sameAs": [
+    "https://maps.google.com/?cid=3248654613300674967",
+    "https://www.mariages.net/musique-mariage/ad-evenements--e317676"
+  ]
+}
+</script>
+<script>document.documentElement.classList.add('js')</script><!-- hidden-until-animated states only apply when JS runs -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
@@ -33,7 +79,6 @@ a{color:inherit;text-decoration:none}
 .display{font-size:clamp(52px,8vw,115px);line-height:.8;letter-spacing:-.04em}
 .h-lg{font-size:clamp(42px,4.8vw,69px);line-height:.9;letter-spacing:-.04em}
 .h-sm{font-size:clamp(34px,3.5vw,50px);line-height:.9;letter-spacing:-.03em}
-.h-xs{font-size:26px;line-height:1.2;letter-spacing:-.006em}
 .cap{font:500 12px/1.3 var(--sans);text-transform:uppercase;letter-spacing:-.012em;color:var(--walnut)}
 .body-lg{font:500 clamp(18px,1.9vw,26px)/1.2 var(--sans);letter-spacing:-.006em;color:var(--espresso);max-width:30ch}
 p{max-width:44ch;color:var(--espresso)}
@@ -52,8 +97,9 @@ p{max-width:44ch;color:var(--espresso)}
 .btn--fill::before{display:none}
 .btn.btn--fill span{color:inherit}
 .btn--fill:hover{background:var(--linen);border-color:var(--linen)}
-.nav.is-solid .btn--fill{background:var(--onyx);border-color:var(--onyx);color:var(--parchment)}
-.nav.is-solid .btn--fill:hover{background:var(--espresso);border-color:var(--espresso)}
+.nav.is-solid .btn{background:var(--onyx);border-color:var(--onyx);color:var(--parchment)}
+.nav.is-solid .btn::before{display:none}
+.nav.is-solid .btn:hover{background:var(--espresso);border-color:var(--espresso)}
 .link{font:500 13px/1 var(--sans);text-transform:uppercase;display:inline-flex;gap:8px;align-items:center;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;padding-bottom:4px;transition:background-size .4s var(--ease)}
 .link:hover{background-size:100% 1px}
 
@@ -78,7 +124,11 @@ p{max-width:44ch;color:var(--espresso)}
 .burger i:first-child{top:18px}.burger i:last-child{top:25px}
 .menu-open .burger i:first-child{transform:translateY(3.5px) rotate(45deg)}
 .menu-open .burger i:last-child{transform:translateY(-3.5px) rotate(-45deg)}
-.mmenu{position:fixed;inset:0;z-index:40;background:var(--roast);color:var(--parchment);padding:110px var(--gut) var(--gut);display:flex;flex-direction:column;justify-content:space-between;clip-path:inset(0 0 100% 0);visibility:hidden}
+.mmenu{position:fixed;inset:0;z-index:40;background:var(--roast);color:var(--parchment);padding:110px var(--gut) var(--gut);display:flex;flex-direction:column;justify-content:space-between}
+.js .mmenu{clip-path:inset(0 0 100% 0);visibility:hidden}
+html:not(.js) .mmenu{position:static;padding-top:96px} /* no JS: the menu is shown as a plain block under the nav */
+html:not(.js) .burger{display:none}
+@media (min-width:961px){html:not(.js) .mmenu{display:none}}
 .mmenu ul{list-style:none}
 .mmenu li{border-bottom:1px solid rgba(216,203,184,.18)}
 .mmenu a.serif{display:block;font-size:clamp(40px,11vw,65px);line-height:1;letter-spacing:-.04em;padding:14px 0}
@@ -91,11 +141,11 @@ p{max-width:44ch;color:var(--espresso)}
 .hero__shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(41,38,34,.55) 0%,rgba(41,38,34,.15) 40%,rgba(41,38,34,.85) 100%)}
 .hero__inner{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 var(--gut) clamp(24px,4vw,42px)}
 .hero__meta{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:clamp(16px,2vw,28px)}
-.hero__meta .cap{color:var(--parchment)}
 .hero__tag{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:clamp(28px,3.4vw,50px);line-height:1.05;letter-spacing:-.03em;max-width:24ch}
 .hero__sub{color:var(--parchment);font-size:15px;margin-top:16px;max-width:44ch}
 .hero__meta .btn{flex-shrink:0}
-.hero img,.atmos img,.cta img{filter:grayscale(1) sepia(.45) brightness(.78) contrast(1.05)} /* warm monochrome grade keeps any placeholder on-palette */
+.atmos img,.cta img{filter:grayscale(1) sepia(.45) brightness(.78) contrast(1.05)} /* warm monochrome grade keeps any placeholder on-palette */
+.hero img{filter:sepia(.6) saturate(.6) hue-rotate(-6deg) brightness(.8) contrast(1.04)} /* sepia like the rest of the site, but some real colour left in the hero */
 .wordmark{font:500 clamp(48px,11.4vw,199px)/.8 var(--sans);letter-spacing:-.016em;text-transform:uppercase;white-space:nowrap;display:flex;justify-content:space-between;gap:.2em}
 .wordmark .wm{display:flex;overflow:hidden;padding-top:.1em}
 .wordmark .c{display:inline-block}
@@ -114,12 +164,29 @@ p{max-width:44ch;color:var(--espresso)}
 .manifesto__grid{display:grid;grid-template-columns:1fr 2.2fr;gap:clamp(24px,4vw,92px);margin-top:28px}
 .manifesto__text{font-size:clamp(34px,4.4vw,64px);line-height:.92;letter-spacing:-.04em}
 .manifesto__text .w{display:inline-block}
-.about{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:clamp(64px,10vw,160px);align-items:end}
-.about__img1{grid-column:1/6;aspect-ratio:4/5;overflow:hidden}
-.about__img2{grid-column:7/10;aspect-ratio:3/4;overflow:hidden;align-self:start}
-.about__txt{grid-column:10/13;display:flex;flex-direction:column;gap:20px;padding-bottom:12px}
-.about img{height:120%;margin-top:-10%}
-.reveal-img{clip-path:inset(100% 0 0 0)}
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(32px,5vw,96px);margin-top:clamp(64px,10vw,160px);align-items:start}
+.about__col{position:sticky;top:96px;display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+.about__list{list-style:none;align-self:stretch;margin-top:12px;border-top:1px solid var(--stone)}
+.about__list li{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:14px 0;border-bottom:1px solid var(--stone);transition:opacity .5s var(--ease)}
+.about__list .about__name{font:500 15px/1.2 var(--sans);text-transform:uppercase;letter-spacing:-.01em;transition:color .5s var(--ease)}
+.about__list .about__desc{grid-column:1/-1;font-size:13px;color:var(--walnut)}
+.about__list.is-tracking li{opacity:.38}
+.about__list.is-tracking .about__desc{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)} /* only the active line opens: keeps the sticky column shorter than the screen */
+.about__list.is-tracking .about__desc>span{overflow:hidden}
+.about__list.is-tracking li.is-active .about__desc{grid-template-rows:1fr}
+.about__col .h-lg{font-size:clamp(36px,3.8vw,58px)}
+@media (max-height:860px){.about__col{gap:16px}.about__list li{padding:9px 0}.about__col .h-lg{font-size:clamp(34px,3.2vw,48px)}} /* laptops: sticky column must fit under the nav */
+.about__list.is-tracking li.is-active{opacity:1}
+.about__list li.is-active .about__name{color:var(--onyx)}
+.about__list li.is-active .cap{color:var(--saffron)}
+.about__media{display:flex;flex-direction:column;gap:16px}
+.about__fig{position:relative;height:calc(100svh - 112px);min-height:480px;max-height:900px;overflow:hidden;background:var(--linen)}
+.about__fig img{transform-origin:center}
+.about__fig figcaption{position:absolute;inset:auto 0 0;padding:64px 24px 22px;display:flex;align-items:baseline;gap:14px;color:var(--parchment);background:linear-gradient(180deg,transparent,rgba(41,38,34,.7))}
+.about__fig figcaption .cap{color:var(--parchment)}
+.about__fig .about__name{font:300 clamp(24px,2.4vw,36px)/1 var(--serif);text-transform:uppercase;letter-spacing:-.02em}
+.about__fig .about__desc{display:none}
+.js .reveal-img{clip-path:inset(100% 0 0 0)}
 
 /* services horizontal */
 .services{background:var(--linen);overflow:hidden}
@@ -139,43 +206,116 @@ p{max-width:44ch;color:var(--espresso)}
 .services__progress i{position:absolute;inset:0;background:var(--onyx);transform:scaleX(0);transform-origin:left}
 
 /* marquee */
-.marquee{border-block:1px solid var(--stone);padding:28px 0;overflow:hidden;white-space:nowrap}
+.marquee{border-block:1px solid var(--stone);padding:14px 0;overflow:hidden;white-space:nowrap}
 .marquee__track{display:inline-flex;animation:marquee 27s linear infinite}
 .marquee:hover .marquee__track{animation-play-state:paused}
-.marquee span{font-size:clamp(42px,6vw,92px);line-height:1;letter-spacing:-.04em;padding:0 .35em;display:inline-flex;align-items:center;gap:.7em}
-.marquee span::after{content:"";width:.12em;height:.12em;border:1px solid var(--walnut);transform:rotate(45deg)}
+.marquee span{font-size:clamp(18px,2vw,26px);line-height:1;letter-spacing:.02em;padding:0 .9em;display:inline-flex;align-items:center;gap:.9em}
+.marquee span::after{content:"";width:.4em;height:.4em;border:1px solid var(--walnut);transform:rotate(45deg)}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
 /* atmosphere */
-.atmos{position:relative;height:120svh;background:var(--parchment)}
-.atmos__sticky{position:sticky;top:0;height:100svh;overflow:hidden}
-.atmos__frame{position:absolute;inset:0;clip-path:inset(14% 18% 14% 18%)}
-.atmos__frame img{transform:scale(1.25)}
+.atmos{position:relative;background:var(--parchment)}
+.atmos__sticky{position:relative;height:100svh;overflow:hidden}
+.atmos__frame{position:absolute;inset:0}
 .atmos__frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(41,38,34,.25),rgba(41,38,34,.75))}
 .atmos__txt{position:absolute;inset:0;z-index:2;color:var(--parchment);padding:var(--gut);display:flex;flex-direction:column;justify-content:flex-end;gap:24px}
 .atmos__txt .cap{color:var(--parchment)}
+.atmos .display{font-size:clamp(44px,5.6vw,84px);line-height:.85}
 
 /* strengths */
-.why__list{list-style:none}
-.why__row{display:grid;grid-template-columns:80px 1.4fr 1fr;gap:24px;padding:28px 0;align-items:baseline;position:relative}
-.why__row .rule{position:absolute;top:0;left:0;right:0}
-.why__row .h-sm{transition:translate .5s var(--ease)} /* `translate`, not `transform`: GSAP owns transform */
-.why__row:hover .h-sm{translate:16px 0}
+.why{text-align:center;overflow:hidden}
+.why__head{display:flex;flex-direction:column;align-items:center;gap:20px}
+.why__head .h-lg{font-size:clamp(46px,6.4vw,96px)}
+.why__stage{--w:min(560px,78vw);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;margin:calc(var(--w) * .16) 0} /* cards reach ~0.62w from the centre: room so they never touch the title while turning */
+.why__side:first-child{text-align:left}.why__side:last-child{text-align:right}
+.why__spin{width:var(--w);aspect-ratio:1;animation:why-spin 70s linear infinite}
+@media (hover:hover){.why__stage:hover .why__spin{animation-play-state:paused}}
+@keyframes why-spin{to{transform:rotate(360deg)}}
+.why__wheel{list-style:none;position:relative;width:100%;height:100%}
+/* each card hangs from the centre by one corner, 72deg apart: five overlapping cards make the pinwheel */
+.why__card{--c:var(--onyx);--t:var(--parchment);position:absolute;left:50%;top:50%;width:46%;aspect-ratio:4/5;transform-origin:0 0;transform:rotate(calc(var(--i) * 72deg * var(--open,1))) translate(-18%,-6%);background:var(--c);color:var(--t);border-radius:4px;padding:6% 7%;display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:6%;box-shadow:0 24px 48px -18px rgba(41,38,34,.45)}
+.why__card:nth-child(2){--c:var(--walnut)}
+.why__card:nth-child(3){--c:#c9a27a;--t:var(--roast)}
+.why__card:nth-child(4){--c:var(--stone);--t:var(--roast)}
+.why__card:nth-child(5){--c:var(--espresso)}
+.why__card .cap{color:inherit;opacity:.7}
+.why__card h3{font-size:calc(var(--w) * .052);line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
+.why__card p{font-size:calc(var(--w) * .024);line-height:1.35;color:inherit;opacity:.85;max-width:none}
+.why__mark{width:18%;margin-top:auto;align-self:flex-end;fill:currentColor;opacity:.6}
+.why__card{cursor:pointer}
+.why__card:focus-visible{outline:2px solid var(--saffron);outline-offset:3px}
+.why__stage.is-paused .why__spin{animation-play-state:paused}
+/* the card picked in the fan, shown upright and large with its full text */
+.why__dialog{margin:auto;border:0;width:min(440px,88vw);aspect-ratio:4/5;max-height:88svh;padding:clamp(28px,5vw,44px);background:var(--c,var(--onyx));color:var(--t,var(--parchment));border-radius:6px;text-align:left;box-shadow:0 40px 80px -24px rgba(41,38,34,.6);overflow:auto}
+.why__dialog[open]{display:flex;flex-direction:column;gap:20px;animation:why-pop .7s cubic-bezier(.16,1,.3,1)} /* CSS, not GSAP: GSAP re-parents an unmeasured fixed element, which drops the dialog out of the top layer */
+@keyframes why-pop{from{opacity:0;transform:scale(.6) rotate(-12deg)}}
+.why__dialog::backdrop{background:rgba(41,38,34,.55);backdrop-filter:blur(4px)}
+.why__dialog .cap{color:inherit;opacity:.7}
+.why__dialog h3{font-size:clamp(34px,6vw,50px);line-height:.95;letter-spacing:-.03em;text-transform:uppercase}
+.why__dialog p{font-size:17px;line-height:1.45;color:inherit;opacity:.9;max-width:none}
+.why__nav{margin-top:auto;display:flex;align-items:center;gap:12px}
+.why__nav .why__mark{width:56px;margin:0 0 0 auto}
+.why__arrow{width:48px;height:48px;border:1px solid currentColor;border-radius:3px;background:none;color:inherit;font:400 18px/1 var(--sans);cursor:pointer;opacity:.75;transition:opacity .4s var(--ease),scale .4s var(--ease)}
+.why__arrow:hover{opacity:1}.why__arrow:active{scale:.92}
+.why__count{color:inherit;opacity:.7;min-width:3.2em;text-align:center}
+.why__close{position:absolute;top:14px;right:14px;width:44px;height:44px;border:1px solid currentColor;border-radius:3px;background:none;color:inherit;font:300 26px/1 var(--sans);cursor:pointer;opacity:.75;transition:opacity .4s var(--ease)}
+.why__close:hover{opacity:1}
+.why__foot{display:flex;flex-direction:column;align-items:center;gap:24px}
+.why__foot p{max-width:46ch;font-size:15px}
 
 /* clients */
 .clients{background:var(--linen);--line:rgba(97,91,83,.3)} /* linen sets it apart from the parchment "Pourquoi nous choisir" */
 .clients .cap{color:var(--espresso)}
-.clients__grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.clients__grid li{list-style:none;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:150px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;transition:background-color .4s var(--ease)}
-.clients__grid li:hover{background:var(--parchment)}
-.clients__grid .h-xs{font-family:var(--serif);text-transform:uppercase}
+.clients .sec-head{margin-bottom:clamp(36px,5vw,72px)}
+.clients__cta{display:flex;justify-content:space-between;align-items:center;gap:20px 32px;flex-wrap:wrap;margin-top:clamp(32px,4vw,56px)}
+.logos{margin:0 calc(var(--gut) * -1);overflow:hidden;border-block:1px solid var(--line);padding:clamp(28px,4vw,52px) 0;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.logos__track{list-style:none;display:flex;align-items:center;width:max-content}
+.logos__track.is-auto{animation:logos var(--dur,50s) linear infinite}
+.logos:hover .logos__track{animation-play-state:paused}
+.logos li{flex:0 0 auto;padding:0 clamp(28px,4vw,64px);display:flex;align-items:center;height:calc(var(--logo-h) * 1.8)}
+.logos img{height:calc(var(--logo-h) * var(--s,1));width:auto;max-width:none;object-fit:contain;filter:brightness(0);opacity:.72;transition:filter .5s var(--ease),opacity .5s var(--ease),scale .5s var(--ease)}
+.logos li{--logo-h:clamp(26px,3vw,44px)}
+.logos li:hover img{filter:none;opacity:1;scale:1.06}
+.logos li:hover img.logo--white{filter:brightness(0)} /* white artwork would vanish on linen */
+@keyframes logos{to{transform:translateX(calc(-1 * var(--shift,0px)))}}
+
+/* reviews */
+.reviews{overflow:hidden}
+.reviews__head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:clamp(42px,6vw,80px)}
+.reviews__head>div>.cap{display:block;margin-bottom:20px}
+.reviews__scores{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.score,.award{border:1px solid var(--stone);border-radius:3px;display:flex;flex-direction:column;min-width:250px;transition:background-color .4s var(--ease),border-color .4s var(--ease)}
+.score:hover,.award:hover{background:var(--linen);border-color:var(--walnut)}
+.score__top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 18px;border-bottom:1px solid var(--stone)}
+.score__bot{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding:14px 18px 16px}
+.score__num{font:500 46px/.9 var(--sans);letter-spacing:-.04em}
+.score__num sup{font-size:14px;vertical-align:top;margin-left:2px;letter-spacing:0}
+.score__txt{font-size:12px;line-height:1.35;color:var(--espresso);text-align:right;max-width:20ch}
+.score__txt b{display:block;color:var(--onyx);font-weight:700}
+.stars{color:var(--saffron);letter-spacing:.18em;font-size:15px;line-height:1}
+.award{flex-direction:row;align-items:center;gap:14px;padding:12px 18px 12px 12px;min-width:0}
+.award img{width:76px;height:76px;object-fit:contain;filter:none;flex-shrink:0}
+.award>span{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--espresso)}
+.award b{font:300 22px/1 var(--serif);text-transform:uppercase;letter-spacing:-.02em;color:var(--onyx)}
+.reviews__track{list-style:none;display:flex;gap:16px;margin:0 calc(var(--gut) * -1);padding:0 var(--gut) 4px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gut);scrollbar-width:none}
+.reviews__track::-webkit-scrollbar{display:none}
+.reviews__track::after{content:"";flex:0 0 1px}
+.review{flex:0 0 clamp(290px,31vw,460px);scroll-snap-align:start;border:1px solid var(--stone);border-radius:3px;display:flex;flex-direction:column;min-height:clamp(320px,30vw,420px);transition:border-color .4s var(--ease)}
+.review:hover{border-color:var(--walnut)}
+.review__top{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;border-bottom:1px solid var(--stone)}
+.review__q{flex:1;padding:24px 22px;font:300 clamp(22px,2vw,30px)/1.12 var(--serif);letter-spacing:-.015em;color:var(--onyx)}
+.review__by{padding:0 22px 20px;font-size:13px;color:var(--walnut);max-width:none}
+.review__by b{color:var(--onyx);font-weight:700}
+/* continuous loop (set by JS, skipped with reduced motion): cards drift to the right, pause while hovered or touched */
+.reviews__track.is-auto{overflow:visible;scroll-snap-type:none;width:max-content;padding-left:0;/* no left pad: both ends of the loop line up */animation:reviews var(--dur,80s) linear infinite}
+.reviews__track.is-auto:hover,.reviews__track.is-auto.is-held{animation-play-state:paused}
+@keyframes reviews{from{transform:translateX(calc(-1 * var(--shift,0px)))}to{transform:none}}
 
 /* cta */
 .cta{position:relative;min-height:100svh;color:var(--parchment);background:var(--roast);overflow:hidden;display:flex;flex-direction:column}
 .cta__media{position:absolute;inset:-10% 0;opacity:.2}
-.cta__inner{position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;padding:var(--sec) var(--gut) 42px;gap:42px}
-.cta__actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
-.cta__contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;border-top:1px solid rgba(216,203,184,.25);padding-top:24px}
+.cta__inner{position:relative;flex:1;display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(42px,6vw,92px);align-items:start;padding:var(--sec) var(--gut) 42px}
+.cta__contacts{display:grid;grid-template-columns:1fr;gap:16px;border-top:1px solid rgba(216,203,184,.25);padding-top:24px}
 .cta__contacts .cap{color:var(--walnut);margin-bottom:8px}
 .cta__contacts a,.cta__contacts div>span{font:500 clamp(18px,1.9vw,26px)/1.2 var(--sans);letter-spacing:-.01em}
 .cta .link{color:var(--parchment)}
@@ -183,46 +323,10 @@ p{max-width:44ch;color:var(--espresso)}
 .footer nav{display:flex;gap:20px;flex-wrap:wrap}
 .footer a:hover{color:var(--parchment)}
 
-/* ---------- responsive ---------- */
-@media (max-width:960px){
-  .nav__links,.nav__tel,.nav .btn{display:none}
-  .burger{display:block}
-  .manifesto__grid{grid-template-columns:1fr}
-  .about{grid-template-columns:1fr 1fr}
-  .about__img1{grid-column:1/3}
-  .about__img2{grid-column:1/2}
-  .about__txt{grid-column:2/3;align-self:end}
-  .services__pin{height:auto;padding:var(--sec) 0}
-  .services__track{flex-direction:column;width:auto;gap:56px}
-  .card{width:100%}
-  .card__img{max-height:none}
-  .services__progress{display:none}
-  .why__row{grid-template-columns:48px 1fr;}
-  .why__row p{grid-column:2}
-  .clients__grid{grid-template-columns:repeat(2,1fr)}
-  .cta__contacts{grid-template-columns:1fr}
-  .sec-head{flex-direction:column;align-items:flex-start}
-}
-@media (max-width:560px){
-  .hero__meta{flex-direction:column;align-items:flex-start}
-  .wordmark{flex-direction:column;font-size:15.5vw;gap:0}
-  .about{grid-template-columns:1fr}
-  .about__img1,.about__img2,.about__txt{grid-column:1/-1}
-  .atmos__frame{clip-path:inset(10% 6% 10% 6%)}
-  .clients__grid li{min-height:120px}
-}
-@media (prefers-reduced-motion:reduce){
-  .marquee__track,.scrollcue i::after{animation:none}
-  html{scroll-behavior:auto}
-  .reveal-img{clip-path:none}
-  .atmos__frame{clip-path:none}
-}
 /* contact + quote form (dark section) */
-.cta__inner{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(42px,6vw,92px);align-items:start}
 .cta__lead{display:flex;flex-direction:column;gap:28px}
 .cta__lead .display{font-size:clamp(48px,6vw,92px)}
 .cta__lead p{color:var(--parchment);opacity:.8}
-.cta__contacts{grid-template-columns:1fr}
 .devis__form .cap,.cta__contacts .cap{color:rgba(216,203,184,.75)}
 .devis__form{display:grid;grid-template-columns:1fr 1fr;gap:24px 28px;color-scheme:dark}
 .devis__full{grid-column:1/-1}
@@ -246,18 +350,101 @@ p{max-width:44ch;color:var(--espresso)}
 .devis__status{font-size:15px;min-height:1.4em;color:var(--parchment)}
 .devis__status.is-err{border-left:2px solid var(--saffron);padding-left:12px}
 .devis__hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+
+/* ---------- responsive ---------- */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{-webkit-tap-highlight-color:transparent}
+html,body{overflow-x:clip} /* hidden on body alone lets iOS widen the layout viewport */
+.btn,.link,.chips span{transition-property:color,background-color,border-color,background-size,scale}
+.btn:active,.chips span:active{scale:.97}
+.mmenu .btn{display:none}
+
+/* touch screens: undo hover effects so nothing stays "stuck" after a tap */
+@media (hover:none){
+  .score:hover,.award:hover{background:none}
+  .btn:hover::before{transform:scaleY(0)}
+  .btn--light:hover span{color:inherit}.btn--dark:hover span{color:inherit}
+  .card:hover .card__img img{scale:1}
+  .logos li:hover img:not(.logo--white){filter:brightness(0);opacity:.72;scale:1}
+}
 @media (max-width:960px){
+  .reviews__head{flex-direction:column;align-items:flex-start}
+  .reviews__scores{justify-content:flex-start}
+  .review{flex-basis:44vw}
+  .nav__links,.nav__tel,.nav .btn{display:none}
+  .burger{display:block}
+  .mmenu .btn{display:inline-flex;justify-content:center;color:var(--roast)}
+  .manifesto__grid{grid-template-columns:1fr}
+  /* tablet/phone: text first, then the photos become a swipe carousel with their own captions */
+  .about{grid-template-columns:1fr;gap:40px}
+  .about__col{position:static}
+  .about__list{display:none}
+  .about__media{flex-direction:row;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gut);margin:0 calc(var(--gut) * -1);padding:0 var(--gut);scrollbar-width:none}
+  .about__media::-webkit-scrollbar{display:none}
+  .about__media::after{content:"";flex:0 0 1px}
+  .about__fig{flex:0 0 46vw;height:auto;min-height:0;aspect-ratio:4/5;scroll-snap-align:start}
+  .about__fig figcaption{flex-direction:column;gap:8px;padding:72px 18px 18px}
+  .about__fig .about__desc{display:block;font-size:13px;line-height:1.35;color:var(--parchment);opacity:.85;max-width:none}
+  /* services: native swipe carousel instead of the desktop pinned scroll */
+  .services__pin{height:auto;padding:var(--sec) 0}
+  .services__track{width:auto;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gut);-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px}
+  .services__track::-webkit-scrollbar{display:none}
+  .services__track::after{content:"";flex:0 0 1px} /* keeps the right gutter after the last card */
+  .card{width:44vw;flex:0 0 auto;scroll-snap-align:start}
+  .card__img{max-height:none}
+  .why__stage{grid-template-columns:1fr;justify-items:center;gap:calc(var(--w) * .2)}
+  .why__side:first-child,.why__side:last-child{text-align:center}
+  .sec-head,.services__head{flex-direction:column;align-items:flex-start}
+  .wordmark{font-size:calc((100vw - 2 * var(--gut)) / 9.4)}
   .cta__inner{grid-template-columns:1fr}
+  .field input,.field select,.field textarea{font-size:16px} /* < 16px makes iOS zoom on focus */
+  .field input,.field select{min-height:44px}
+  .chips span{padding:14px 16px}
 }
 @media (max-width:560px){
-  .devis__form{grid-template-columns:1fr}
+  .clients__cta .btn{width:100%;justify-content:center}
+  .reviews__scores{display:grid;grid-template-columns:1fr;width:100%}
+  .score{min-width:0}
+  .score__num{font-size:40px}
+  .review{flex-basis:84vw;min-height:300px}
+  .review__q{font-size:23px}
+  :root{--sec:72px}
+  body{font-size:15px}
+  p{font-size:15px;line-height:1.5}
+  .hero__meta{flex-direction:column;align-items:flex-start}
+  .hero__tag{font-size:clamp(26px,7.4vw,34px)}
+  .hero__foot .cap:last-child{display:none}
+  .wordmark{flex-direction:column;font-size:calc((100vw - 2 * var(--gut)) / 6.8);gap:0}
+  .manifesto__text{font-size:clamp(30px,8.6vw,40px);line-height:.98}
+  .about__fig{flex-basis:82vw}
+  .about__col .btn{width:100%;justify-content:center}
+  .h-lg{font-size:clamp(38px,11vw,48px)}
+  .h-sm{font-size:clamp(28px,8vw,36px)}
+  .card{width:82vw}
+  .atmos__sticky{height:80svh}
+  .atmos .display{font-size:clamp(34px,10vw,46px)}
+  .marquee span{font-size:20px}
+  .why__stage{--w:68vw;margin:calc(var(--w) * .1) 0}
+  .why__card p{display:none} /* too small to read on a phone: title only */
+  .why__card h3{font-size:calc(var(--w) * .062)}
+  .cta__lead .display{font-size:clamp(40px,12vw,56px)}
+  .devis__foot .btn{width:100%;justify-content:center}
+  .devis__form{grid-template-columns:1fr;gap:22px}
+}
+@media (prefers-reduced-motion:reduce){
+  .marquee__track,.scrollcue i::after,.why__spin,.why__dialog[open]{animation:none}
+  .logos__track{flex-wrap:wrap;justify-content:center;width:auto}
+  html{scroll-behavior:auto}
+  .js .reveal-img{clip-path:none}
+  .atmos__frame{clip-path:none}
 }
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="ad-mark" overflow="visible"><path d="M627 201h10l257 538H771L581 338 381 739h-23z"/><path d="M685 201h185c150 0 263 119 263 264 0 135-93 245-227 274 94-69 135-159 135-274 0-135-91-243-201-243-40 0-57 10-57 38l-1 151z"/></symbol></svg>
 
 <header class="nav" id="nav">
-  <a href="#top" class="nav__logo" aria-label="AD Événements — accueil"><span class="nav__mark"><svg viewBox="350 195 790 550" aria-hidden="true"><path d="M627 201h10l257 538H771L581 338 381 739h-23z"/><path d="M685 201h185c150 0 263 119 263 264 0 135-93 245-227 274 94-69 135-159 135-274 0-135-91-243-201-243-40 0-57 10-57 38l-1 151z"/></svg></span></a>
+  <a href="#top" class="nav__logo" aria-label="AD Evenements — accueil"><span class="nav__mark"><svg viewBox="350 195 790 550" aria-hidden="true"><use href="#ad-mark"/></svg></span></a>
   <ul class="nav__links">
     <li><a href="#prestations">Prestations</a></li>
     <li><a href="#photobooth">Photobooth</a></li>
@@ -267,7 +454,7 @@ p{max-width:44ch;color:var(--espresso)}
   </ul>
   <div class="nav__right">
     <a class="nav__tel" href="tel:+33677493859">06 77 49 38 59</a>
-    <a class="btn btn--light btn--fill" href="#devis"><span>Devis gratuit</span></a>
+    <a class="btn btn--light" href="#devis"><span>Devis gratuit</span></a>
     <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mmenu"><i></i><i></i></button>
   </div>
 </header>
@@ -283,13 +470,14 @@ p{max-width:44ch;color:var(--espresso)}
   <div style="display:flex;flex-direction:column;gap:12px">
     <a class="link" href="tel:+33677493859">06 77 49 38 59</a>
     <a class="link" href="mailto:contact@adevenements.fr">contact@adevenements.fr</a>
+    <a class="btn btn--fill" href="#devis"><span>Devis gratuit</span></a>
   </div>
 </nav>
 
 <main id="top">
   <!-- HERO -->
   <section class="hero" aria-label="Accueil">
-    <div class="hero__media"><img src="images/hero-soiree-guirlandes.jpg" alt="Piste de danse sous des guirlandes lumineuses pendant une réception"></div>
+    <div class="hero__media"><img fetchpriority="high" src="images/hero-soiree-guirlandes.jpg" width="2400" height="1600" srcset="images/hero-soiree-guirlandes-1200.jpg 1200w, images/hero-soiree-guirlandes.jpg 2400w" sizes="100vw" alt="Piste de danse sous des guirlandes lumineuses pendant une réception"></div>
     <div class="hero__shade"></div>
     <div class="hero__inner">
       <div class="hero__meta">
@@ -301,7 +489,7 @@ p{max-width:44ch;color:var(--espresso)}
       </div>
       <div class="wordmark" aria-hidden="true">
         <span class="wm">AD</span>
-        <span class="wm">Événements</span>
+        <span class="wm">Evenements</span>
       </div>
       <div class="hero__foot" data-hero-fade>
         <span class="scrollcue cap" style="color:var(--parchment)"><i></i>Découvrir</span>
@@ -317,14 +505,29 @@ p{max-width:44ch;color:var(--espresso)}
       <span class="cap">(01) L'agence</span>
       <p class="manifesto__text serif" data-words>Une agence événementielle qui imagine des moments à votre image, où la musique, la lumière et chaque détail se réunissent pour créer des émotions et des souvenirs inoubliables.</p>
     </div>
+    <!-- left column stays put while the photos scroll by; each list item lights up with its photo -->
     <div class="about">
-      <div class="about__img1 reveal-img"><img loading="lazy" data-speed="-12" src="images/agence-dj-mariage-arras.jpg" alt="DJ AD Événements aux platines lors d'un mariage à Arras"></div>
-      <div class="about__img2 reveal-img"><img loading="lazy" data-speed="12" src="images/agence-piste-de-danse.jpg" alt="Invités qui dansent avec énergie sur la piste pendant une soirée"></div>
-      <div class="about__txt">
-        <span class="cap">Basés à Arras</span>
-        <p class="body-lg" data-fade>DJ, photobooth et organisation d'événements dans tous les Hauts-de-France.</p>
-        <p data-fade>Depuis plusieurs années, notre équipe passionnée accompagne mariages, soirées privées et événements d'entreprise. Un matériel son et lumière haut de gamme, des ambiances sur mesure et un conseil personnalisé, du premier échange à la dernière danse.</p>
-        <a class="link" href="#contact" data-fade>Parler de votre projet →</a>
+      <div class="about__col">
+        <span class="cap">Basés à Arras · Hauts-de-France</span>
+        <h2 class="serif h-lg" data-lines><span class="line"><span>Du premier échange</span></span><span class="line"><span>à la dernière danse</span></span></h2>
+        <p data-fade>Depuis plusieurs années, notre équipe passionnée accompagne mariages, soirées privées et événements d'entreprise&nbsp;: DJ, photobooth, son et lumière haut de gamme et ambiances sur mesure.</p>
+        <a class="btn btn--dark" data-magnetic href="#contact"><span>Parler de votre projet</span><span aria-hidden="true">→</span></a>
+        <ol class="about__list">
+          <li><span class="about__name">DJ &amp; animation</span><span class="cap">01</span><span class="about__desc"><span>Des DJ qui lisent la piste et font monter l'énergie au bon moment.</span></span></li>
+          <li><span class="about__name">Mariages</span><span class="cap">02</span><span class="about__desc"><span>Cérémonie, vin d'honneur, entrée des mariés, soirée : chaque temps fort coordonné.</span></span></li>
+          <li><span class="about__name">Soirées privées</span><span class="cap">03</span><span class="about__desc"><span>Anniversaires, baptêmes, réceptions : une soirée qui vous ressemble.</span></span></li>
+          <li><span class="about__name">Événements d'entreprise</span><span class="cap">04</span><span class="about__desc"><span>Galas, séminaires, soirées de fin d'année, à l'image de votre marque.</span></span></li>
+          <li><span class="about__name">Son &amp; lumière</span><span class="cap">05</span><span class="about__desc"><span>Un matériel professionnel haut de gamme, installé et réglé pour votre lieu.</span></span></li>
+          <li><span class="about__name">Conseil sur mesure</span><span class="cap">06</span><span class="about__desc"><span>Un interlocuteur dédié, du premier échange à la dernière danse.</span></span></li>
+        </ol>
+      </div>
+      <div class="about__media">
+        <figure class="about__fig reveal-img"><img loading="lazy" src="images/agence-dj-mariage-arras.jpg" width="1600" height="1066" srcset="images/agence-dj-mariage-arras-900.jpg 900w, images/agence-dj-mariage-arras.jpg 1600w" sizes="(max-width:560px) 82vw, (max-width:960px) 46vw, 50vw" alt="DJ AD Evenements aux platines lors d'un mariage à Arras"><figcaption><span class="cap">01</span><span class="about__name">DJ &amp; animation</span><span class="about__desc">Des DJ qui lisent la piste et font monter l'énergie au bon moment.</span></figcaption></figure>
+        <figure class="about__fig reveal-img"><img loading="lazy" src="images/agence-mariage.jpg" width="1200" height="1800" srcset="images/agence-mariage-700.jpg 700w, images/agence-mariage.jpg 1200w" sizes="(max-width:560px) 82vw, (max-width:960px) 46vw, 50vw" alt="Mariés qui s'embrassent, bouquet de roses blanches à la main"><figcaption><span class="cap">02</span><span class="about__name">Mariages</span><span class="about__desc">Cérémonie, vin d'honneur, entrée des mariés, soirée : chaque temps fort coordonné.</span></figcaption></figure>
+        <figure class="about__fig reveal-img"><img loading="lazy" src="images/agence-soiree-privee.jpg" width="736" height="1104" alt="Table dressée en noir et or pour un anniversaire de 40 ans"><figcaption><span class="cap">03</span><span class="about__name">Soirées privées</span><span class="about__desc">Anniversaires, baptêmes, réceptions : une soirée qui vous ressemble.</span></figcaption></figure>
+        <figure class="about__fig reveal-img"><img loading="lazy" src="images/agence-entreprise.jpg" width="1400" height="1050" srcset="images/agence-entreprise-800.jpg 800w, images/agence-entreprise.jpg 1400w" sizes="(max-width:560px) 82vw, (max-width:960px) 46vw, 50vw" alt="DJ AD Evenements en soirée d'entreprise dans un rooftop parisien"><figcaption><span class="cap">04</span><span class="about__name">Événements d'entreprise</span><span class="about__desc">Galas, séminaires, soirées de fin d'année, à l'image de votre marque.</span></figcaption></figure>
+        <figure class="about__fig reveal-img"><img loading="lazy" src="images/agence-son-lumiere.jpg" width="1400" height="1050" srcset="images/agence-son-lumiere-800.jpg 800w, images/agence-son-lumiere.jpg 1400w" sizes="(max-width:560px) 82vw, (max-width:960px) 46vw, 50vw" alt="Salle de réception éclairée en bleu et violet par nos projecteurs"><figcaption><span class="cap">05</span><span class="about__name">Son &amp; lumière</span><span class="about__desc">Un matériel professionnel haut de gamme, installé et réglé pour votre lieu.</span></figcaption></figure>
+        <figure class="about__fig reveal-img"><img loading="lazy" src="images/agence-piste-de-danse.jpg" width="2000" height="1333" srcset="images/agence-piste-de-danse-900.jpg 900w, images/agence-piste-de-danse.jpg 2000w" sizes="(max-width:560px) 82vw, (max-width:960px) 46vw, 50vw" alt="Invités qui dansent avec énergie sur la piste pendant une soirée"><figcaption><span class="cap">06</span><span class="about__name">Conseil sur mesure</span><span class="about__desc">Un interlocuteur dédié, du premier échange à la dernière danse.</span></figcaption></figure>
       </div>
     </div>
   </section>
@@ -338,35 +541,35 @@ p{max-width:44ch;color:var(--espresso)}
       </div>
       <div class="services__track">
         <article class="card">
-          <div class="card__img"><img loading="lazy" src="images/dj-mariage-hauts-de-france.jpg" alt="Mariés et invités trinquant au champagne"></div>
+          <div class="card__img"><img loading="lazy" src="images/dj-mariage-hauts-de-france.jpg" width="1400" height="1000" srcset="images/dj-mariage-hauts-de-france-900.jpg 900w, images/dj-mariage-hauts-de-france.jpg 1400w" sizes="(max-width:560px) 82vw, (max-width:960px) 45vw, 440px" alt="Mariés et invités trinquant au champagne"></div>
           <div class="card__top"><span class="cap card__num">01</span><span class="cap">Mariage</span></div>
           <h3 class="serif h-sm">DJ Mariage</h3>
           <p>Le DJ est un pilier de la réussite d'un mariage. Nous coordonnons chaque temps fort de votre journée, du vin d'honneur à la dernière danse.</p>
           <a class="link" href="https://adevenements.fr/dj-mariage-hauts-de-france">Découvrir →</a>
         </article>
         <article class="card">
-          <div class="card__img"><img loading="lazy" src="images/dj-soiree-entreprise-carlton.jpg" alt="Salle de réception du Carlton Cannes éclairée pour une soirée d'entreprise"></div>
+          <div class="card__img"><img loading="lazy" src="images/dj-soiree-entreprise-carlton.jpg" width="1400" height="1050" srcset="images/dj-soiree-entreprise-carlton-900.jpg 900w, images/dj-soiree-entreprise-carlton.jpg 1400w" sizes="(max-width:560px) 82vw, (max-width:960px) 45vw, 440px" alt="Salle de réception du Carlton Cannes éclairée pour une soirée d'entreprise"></div>
           <div class="card__top"><span class="cap card__num">02</span><span class="cap">Entreprise</span></div>
           <h3 class="serif h-sm">Événements professionnels</h3>
           <p>Conférences, séminaires, galas, lancements de produit&nbsp;: une ambiance sonore maîtrisée, à l'image de votre marque.</p>
           <a class="link" href="https://adevenements.fr/dj-evenement-professionnel-hauts-de-france">Découvrir →</a>
         </article>
         <article class="card">
-          <div class="card__img"><img loading="lazy" src="images/dj-soiree-privee.jpg" alt="Invités qui trinquent sous les confettis"></div>
+          <div class="card__img"><img loading="lazy" src="images/dj-soiree-privee.jpg" width="1400" height="935" srcset="images/dj-soiree-privee-900.jpg 900w, images/dj-soiree-privee.jpg 1400w" sizes="(max-width:560px) 82vw, (max-width:960px) 45vw, 440px" alt="Invités qui trinquent sous les confettis"></div>
           <div class="card__top"><span class="cap card__num">03</span><span class="cap">Particulier</span></div>
           <h3 class="serif h-sm">Soirées privées</h3>
           <p>Anniversaires, crémaillères, baptêmes, communions et réceptions privées&nbsp;: une soirée qui vous ressemble.</p>
           <a class="link" href="https://adevenements.fr/dj-particulier-hauts-de-france">Découvrir →</a>
         </article>
         <article class="card" id="photobooth">
-          <div class="card__img"><img loading="lazy" src="images/location-photobooth-arras.jpg" alt="Borne photobooth en bois installée pour une réception"></div>
+          <div class="card__img"><img loading="lazy" src="images/location-photobooth-arras.jpg" width="1400" height="1050" srcset="images/location-photobooth-arras-900.jpg 900w, images/location-photobooth-arras.jpg 1400w" sizes="(max-width:560px) 82vw, (max-width:960px) 45vw, 440px" alt="Borne photobooth en bois installée pour une réception"></div>
           <div class="card__top"><span class="cap card__num">04</span><span class="cap">Photobooth</span></div>
           <h3 class="serif h-sm">Borne photo en bois</h3>
           <p>Personnalisée à vos couleurs, avec tirages instantanés. Livraison, installation et reprise dans le Pas-de-Calais et les Hauts-de-France.</p>
           <a class="link" href="https://adevenements.fr/location-photobooth-hauts-de-france">Découvrir →</a>
         </article>
         <article class="card">
-          <div class="card__img"><img loading="lazy" src="images/options-artifices.jpg" alt="Étincelle d'artifice dans la nuit"></div>
+          <div class="card__img"><img loading="lazy" src="images/options-artifices.jpg" width="1400" height="933" srcset="images/options-artifices-900.jpg 900w, images/options-artifices.jpg 1400w" sizes="(max-width:560px) 82vw, (max-width:960px) 45vw, 440px" alt="Étincelle d'artifice dans la nuit"></div>
           <div class="card__top"><span class="cap card__num">05</span><span class="cap">Sur mesure</span></div>
           <h3 class="serif h-sm">Options & services</h3>
           <p>Videobooth, artifices, sonorisation, décoration et mobilier, musiciens, vidéaste, photographe, traiteur, serveurs, barman, food trucks.</p>
@@ -374,6 +577,17 @@ p{max-width:44ch;color:var(--espresso)}
         </article>
       </div>
       <div class="services__progress"><i></i></div>
+    </div>
+  </section>
+
+  <!-- ATMOSPHERE -->
+  <section class="atmos" aria-label="Ambiance">
+    <div class="atmos__sticky">
+      <div class="atmos__frame"><img loading="lazy" src="images/ambiance-eclairage-soiree.jpg" width="2400" height="1600" srcset="images/ambiance-eclairage-soiree-1200.jpg 1200w, images/ambiance-eclairage-soiree.jpg 2400w" sizes="100vw" alt="Piste de danse sous les lyres lumineuses"></div>
+      <div class="atmos__txt">
+        <span class="cap">Son &amp; lumière haut de gamme</span>
+        <h2 class="serif display" data-lines><span class="line"><span>Le son,</span></span><span class="line"><span>la lumière,</span></span><span class="line"><span>l'émotion.</span></span></h2>
+      </div>
     </div>
   </section>
 
@@ -385,30 +599,39 @@ p{max-width:44ch;color:var(--espresso)}
     </div>
   </div>
 
-  <!-- ATMOSPHERE -->
-  <section class="atmos" aria-label="Ambiance">
-    <div class="atmos__sticky">
-      <div class="atmos__frame"><img loading="lazy" src="images/ambiance-eclairage-soiree.jpg" alt="Piste de danse sous les lyres lumineuses"></div>
-      <div class="atmos__txt">
-        <span class="cap">Son &amp; lumière haut de gamme</span>
-        <h2 class="serif display" data-lines><span class="line"><span>Le son,</span></span><span class="line"><span>la lumière,</span></span><span class="line"><span>l'émotion.</span></span></h2>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY -->
-  <section class="sec">
-    <div class="sec-head">
-      <h2 class="serif h-lg" data-lines><span class="line"><span>Pourquoi</span></span><span class="line"><span>nous choisir</span></span></h2>
+  <!-- WHY: our 5 commitments as a fan of cards that turns slowly and spins further with the scroll -->
+  <section class="sec why" aria-labelledby="why-title">
+    <div class="why__head">
       <span class="cap">(03) Nos engagements</span>
+      <h2 class="serif h-lg" id="why-title" data-lines><span class="line"><span>Pourquoi</span></span><span class="line"><span>nous choisir</span></span></h2>
     </div>
-    <ol class="why__list">
-      <li class="why__row"><i class="rule" data-rule></i><span class="cap">01</span><h3 class="serif h-sm">DJ professionnels expérimentés</h3><p>Des DJ qui lisent la piste et savent faire monter l'énergie au bon moment.</p></li>
-      <li class="why__row"><i class="rule" data-rule></i><span class="cap">02</span><h3 class="serif h-sm">Prestations sur mesure</h3><p>Chaque événement est unique&nbsp;: playlist, déroulé et ambiance construits avec vous.</p></li>
-      <li class="why__row"><i class="rule" data-rule></i><span class="cap">03</span><h3 class="serif h-sm">Conseil personnalisé</h3><p>Un interlocuteur dédié qui vous guide, du premier appel au jour J.</p></li>
-      <li class="why__row"><i class="rule" data-rule></i><span class="cap">04</span><h3 class="serif h-sm">Une équipe réactive</h3><p>Passionnée, disponible et attentive à chaque détail.</p></li>
-      <li class="why__row"><i class="rule" data-rule></i><span class="cap">05</span><h3 class="serif h-sm">Matériel haut de gamme</h3><p>Son et lumière professionnels pour un rendu à la hauteur de votre événement.</p></li>
-    </ol>
+    <div class="why__stage">
+      <span class="cap why__side">Une équipe passionnée</span>
+      <div class="why__spin">
+        <ol class="why__wheel">
+          <li class="why__card" style="--i:0" tabindex="0" role="button" aria-haspopup="dialog"><span class="cap">01</span><h3 class="serif">DJ professionnels expérimentés</h3><p>Des DJ qui lisent la piste et font monter l'énergie au bon moment.</p><svg class="why__mark" viewBox="350 195 790 550" aria-hidden="true"><use href="#ad-mark"/></svg></li>
+          <li class="why__card" style="--i:1" tabindex="0" role="button" aria-haspopup="dialog"><span class="cap">02</span><h3 class="serif">Prestations sur mesure</h3><p>Playlist, déroulé et ambiance construits avec vous.</p><svg class="why__mark" viewBox="350 195 790 550" aria-hidden="true"><use href="#ad-mark"/></svg></li>
+          <li class="why__card" style="--i:2" tabindex="0" role="button" aria-haspopup="dialog"><span class="cap">03</span><h3 class="serif">Conseil personnalisé</h3><p>Un interlocuteur dédié, du premier appel au jour J.</p><svg class="why__mark" viewBox="350 195 790 550" aria-hidden="true"><use href="#ad-mark"/></svg></li>
+          <li class="why__card" style="--i:3" tabindex="0" role="button" aria-haspopup="dialog"><span class="cap">04</span><h3 class="serif">Une équipe réactive</h3><p>Passionnée, disponible et attentive à chaque détail.</p><svg class="why__mark" viewBox="350 195 790 550" aria-hidden="true"><use href="#ad-mark"/></svg></li>
+          <li class="why__card" style="--i:4" tabindex="0" role="button" aria-haspopup="dialog"><span class="cap">05</span><h3 class="serif">Matériel haut de gamme</h3><p>Son et lumière professionnels, à la hauteur de votre événement.</p><svg class="why__mark" viewBox="350 195 790 550" aria-hidden="true"><use href="#ad-mark"/></svg></li>
+        </ol>
+      </div>
+      <span class="cap why__side">Un événement à votre image</span>
+    </div>
+    <dialog class="why__dialog" aria-labelledby="why-dialog-title">
+      <button class="why__close" type="button" aria-label="Fermer">×</button>
+      <span class="cap"></span><h3 class="serif" id="why-dialog-title"></h3><p></p>
+      <div class="why__nav">
+        <button class="why__arrow" type="button" data-dir="-1" aria-label="Engagement précédent">←</button>
+        <span class="cap why__count" aria-live="polite"></span>
+        <button class="why__arrow" type="button" data-dir="1" aria-label="Engagement suivant">→</button>
+        <svg class="why__mark" viewBox="350 195 790 550" aria-hidden="true"><use href="#ad-mark"/></svg>
+      </div>
+    </dialog>
+    <div class="why__foot" data-fade>
+      <p>Mariage, anniversaire ou soirée d'entreprise&nbsp;: nous construisons chaque événement avec vous, pour qu'il ne ressemble à aucun autre.</p>
+      <a class="btn btn--dark" data-magnetic href="#devis"><span>Demander un devis</span><span aria-hidden="true">→</span></a>
+    </div>
   </section>
 
   <!-- CLIENTS -->
@@ -417,33 +640,74 @@ p{max-width:44ch;color:var(--espresso)}
       <h2 class="serif h-lg" data-lines><span class="line"><span>Ils nous ont</span></span><span class="line"><span>fait confiance</span></span></h2>
       <span class="cap">(04) Références</span>
     </div>
-    <ul class="clients__grid" data-stagger>
-      <li><span class="cap">Marque</span><span class="h-xs">Red Bull</span></li>
-      <li><span class="cap">Hôtellerie</span><span class="h-xs">Carlton Cannes</span></li>
-      <li><span class="cap">Luxe</span><span class="h-xs">Bulgari</span></li>
-      <li><span class="cap">Marque</span><span class="h-xs">Coca-Cola</span></li>
-      <li><span class="cap">Hôtellerie</span><span class="h-xs">Club Med</span></li>
-      <li><span class="cap">Automobile</span><span class="h-xs">Porsche</span></li>
-      <li><span class="cap">Festival</span><span class="h-xs">Greenway Festival</span></li>
-      <li><span class="cap">Lille</span><span class="h-xs">One Stage Audiovisuel</span></li>
-      <li><span class="cap">Arras</span><span class="h-xs">One Events Live</span></li>
-      <li><span class="cap">Anzin-Saint-Aubin</span><span class="h-xs">Hôtel Le Fairway</span></li>
-      <li><span class="cap">Loisirs</span><span class="h-xs">Base nautique du Val Joly</span></li>
-      <li><span class="cap">Et vous&nbsp;?</span><a class="link" href="#devis">Votre événement →</a></li>
+  <!-- logos only; --s scales each mark so their visual weight matches. --white: logo file is white, stays tinted on hover -->
+  <div class="logos" data-logos>
+    <ul class="logos__track">
+      <li style="--s:1.25"><img src="images/logos/versailles.svg" width="290" height="74" alt="Château de Versailles" class="logo--white"></li>
+      <li style="--s:1.1"><img src="images/logos/redbull.svg" width="607" height="147" alt="Red Bull"></li>
+      <li style="--s:1.3"><img src="images/logos/carlton.png" width="500" height="182" alt="Carlton Cannes"></li>
+      <li style="--s:.55"><img src="images/logos/bulgari.svg" width="3000" height="330" alt="Bulgari"></li>
+      <li style="--s:1.15"><img src="images/logos/cocacola.svg" width="615" height="193" alt="Coca-Cola"></li>
+      <li style="--s:.75"><img src="images/logos/clubmed.svg" width="1024" height="200" alt="Club Med"></li>
+      <li style="--s:.45"><img src="images/logos/porsche.svg" width="1800" height="120" alt="Porsche"></li>
+      <li style="--s:1.4"><img src="images/logos/onstage.png" width="722" height="464" alt="On Stage Audiovisuel"></li>
+      <li style="--s:1.5"><img src="images/logos/oneevents.png" width="389" height="219" alt="One Events Live"></li>
+      <li style="--s:1.4"><img src="images/logos/fairway.svg" width="410" height="114" alt="Hôtel Le Fairway" class="logo--white"></li>
+      <li style="--s:1.7"><img src="images/logos/valjoly.png" width="800" height="616" alt="Base nautique du ValJoly" class="logo--white"></li>
+    </ul>
+  </div>
+  <div class="clients__cta" data-fade>
+    <p class="body-lg">Votre événement mérite la même attention.</p>
+    <a class="btn btn--dark" data-magnetic href="#devis"><span>Pourquoi pas vous ?</span><span aria-hidden="true">→</span></a>
+  </div>
+  </section>
+
+  <!-- AVIS -->
+  <section class="sec reviews" id="avis" aria-labelledby="avis-title">
+    <div class="reviews__head">
+      <div>
+        <span class="cap">(05) Avis clients</span>
+        <h2 class="serif h-lg" id="avis-title" data-lines><span class="line"><span>Ce que disent</span></span><span class="line"><span>nos clients</span></span></h2>
+      </div>
+      <div class="reviews__scores" data-fade>
+        <a class="score" href="https://maps.google.com/?cid=3248654613300674967" target="_blank" rel="noopener">
+          <span class="score__top"><span class="stars" aria-hidden="true">★★★★★</span><span class="cap">Google ↗</span></span>
+          <span class="score__bot"><span class="score__num">5,0<sup>/5</sup></span><span class="score__txt"><b>Excellent</b>20 avis Google</span></span>
+        </a>
+        <a class="score" href="https://www.mariages.net/musique-mariage/ad-evenements--e317676/avis" target="_blank" rel="noopener">
+          <span class="score__top"><span class="stars" aria-hidden="true">★★★★★</span><span class="cap">Mariages.net ↗</span></span>
+          <span class="score__bot"><span class="score__num">5,0<sup>/5</sup></span><span class="score__txt"><b>Recommandé par 100&nbsp;% des couples</b>24 avis Mariages.net</span></span>
+        </a>
+        <a class="award" href="https://www.mariages.net/musique-mariage/ad-evenements--e317676" target="_blank" rel="noopener">
+          <img src="images/wedding-awards-2026.jpg" alt="Gagnant Wedding Awards 2026 Mariages.net" width="500" height="502" loading="lazy">
+          <span><span class="cap">Label officiel</span><b>Wedding Awards 2026</b>Mariages.net</span>
+        </a>
+      </div>
+    </div>
+    <!-- vrais avis, extraits (relevés le 18/11/2026 sur Google Maps et Mariages.net) -->
+    <ul class="reviews__track" data-reviews>
+      <li class="review"><div class="review__top"><span class="stars" role="img" aria-label="5 sur 5">★★★★★</span><span class="cap">Mariages.net</span></div><blockquote class="review__q">« Si vous cherchez un DJ pour votre mariage, nous vous recommandons Alexis les yeux fermés&nbsp;! Il a tout de suite compris nos goûts et a su créer exactement l'atmosphère dont nous rêvions. »</blockquote><p class="review__by"><b>Joséphine</b> · Mariage · octobre 2026</p></li>
+      <li class="review"><div class="review__top"><span class="stars" role="img" aria-label="5 sur 5">★★★★★</span><span class="cap">Google</span></div><blockquote class="review__q">« Alex est un super DJ, il a été parfait pendant notre mariage et s'est donné à 100&nbsp;%. Il est à l'écoute des goûts et c'est un DJ qui a du goût&nbsp;! »</blockquote><p class="review__by"><b>Pierrick L.</b> · Mariage · septembre 2026</p></li>
+      <li class="review"><div class="review__top"><span class="stars" role="img" aria-label="5 sur 5">★★★★★</span><span class="cap">Mariages.net</span></div><blockquote class="review__q">« Alexis a mis le feu à la soirée et beaucoup de nos invités ont eu des courbatures le lendemain matin. Une prestation sur mesure par un DJ aussi doué que sympathique. »</blockquote><p class="review__by"><b>Chloé</b> · Mariage · avril 2025</p></li>
+      <li class="review"><div class="review__top"><span class="stars" role="img" aria-label="5 sur 5">★★★★★</span><span class="cap">Google</span></div><blockquote class="review__q">« La sélection des titres, la qualité du matériel et des enchaînements musicaux ont fait de nos 10&nbsp;ans de mariage une soirée plus que réussie. »</blockquote><p class="review__by"><b>Lucile B.</b> · Anniversaire de mariage · mai 2026</p></li>
+      <li class="review"><div class="review__top"><span class="stars" role="img" aria-label="5 sur 5">★★★★★</span><span class="cap">Mariages.net</span></div><blockquote class="review__q">« Il s'est coordonné avec le saxophoniste, la photographe et le traiteur. Il a mis le feu à la soirée. Les invités n'ont pas quitté la piste. »</blockquote><p class="review__by"><b>Adeline</b> · Mariage · mai 2026</p></li>
+      <li class="review"><div class="review__top"><span class="stars" role="img" aria-label="5 sur 5">★★★★★</span><span class="cap">Mariages.net</span></div><blockquote class="review__q">« Tout était au top du début à la fin&nbsp;: la cérémonie laïque, le vin d'honneur, l'entrée en salle, le photobooth, les animations et bien sûr la soirée&nbsp;! »</blockquote><p class="review__by"><b>Fabien</b> · Mariage · octobre 2026</p></li>
+      <li class="review"><div class="review__top"><span class="stars" role="img" aria-label="5 sur 5">★★★★★</span><span class="cap">Mariages.net</span></div><blockquote class="review__q">« Il a su mettre l'ambiance et se coordonner avec nos amis et nos prestataires. Un grand merci Alexis, nous avons adoré l'ambiance de notre mariage&nbsp;! »</blockquote><p class="review__by"><b>Estelle</b> · Mariage · juillet 2026</p></li>
     </ul>
   </section>
 
   <!-- CONTACT + DEVIS -->
   <section class="cta" id="contact">
-    <div class="cta__media"><img loading="lazy" data-speed="15" src="images/contact-salle-reception.jpg" alt=""></div>
+    <div class="cta__media"><img loading="lazy" data-speed="15" src="images/contact-salle-reception.jpg" width="1800" height="1200" srcset="images/contact-salle-reception-1200.jpg 1200w, images/contact-salle-reception.jpg 1800w" sizes="100vw" alt=""></div>
     <div class="cta__inner">
       <div class="cta__lead">
-        <span class="cap" style="color:var(--parchment)">(05) Contact &amp; devis</span>
+        <span class="cap" style="color:var(--parchment)">(06) Contact &amp; devis</span>
         <h2 class="serif display" data-lines><span class="line"><span>Parlons de</span></span><span class="line"><span>votre événement</span></span></h2>
         <p>Décrivez votre projet en quelques lignes : nous revenons vers vous sous 48&nbsp;h avec un devis gratuit et sans engagement.</p>
         <div class="cta__contacts">
           <div><div class="cap">Téléphone</div><a href="tel:+33677493859">06 77 49 38 59</a></div>
           <div><div class="cap">E-mail</div><a href="mailto:contact@adevenements.fr">contact@adevenements.fr</a></div>
+          <div><div class="cap">Adresse</div><span>16 rue des Capucins, 62000 Arras</span></div>
           <div><div class="cap">Zone d'intervention</div><span>Arras · Lille · Hauts-de-France</span></div>
         </div>
       </div>
@@ -451,7 +715,7 @@ p{max-width:44ch;color:var(--espresso)}
       <form class="devis__form" id="devis" action="https://formsubmit.co/contact@adevenements.fr" method="POST" aria-label="Demande de devis gratuit">
         <!-- anti-spam: real visitors never fill this hidden field -->
         <input type="text" name="_honey" class="devis__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <input type="hidden" name="_subject" value="Nouvelle demande de devis — site AD Événements">
+        <input type="hidden" name="_subject" value="Nouvelle demande de devis — site AD Evenements">
         <input type="hidden" name="_template" value="table">
 
         <label class="field"><span class="cap">Nom et prénom *</span><input name="Nom" required autocomplete="name"></label>
@@ -487,9 +751,9 @@ p{max-width:44ch;color:var(--espresso)}
       </form>
     </div>
     <footer class="footer">
-      <span>© <span id="year"></span> AD Événements — Arras</span>
+      <span>© <span id="year"></span> AD Evenements — 16 rue des Capucins, 62000 Arras</span>
       <nav aria-label="Pied de page">
-        <a href="#prestations">Prestations</a><a href="#photobooth">Photobooth</a><a href="#options">Options</a><a href="#devis">Devis</a>
+        <a href="#prestations">Prestations</a><a href="#photobooth">Photobooth</a><a href="#options">Options</a><a href="#devis">Devis</a><a href="/mentions-legales">Mentions légales</a><a href="/politique-de-confidentialite">Confidentialité</a>
       </nav>
     </footer>
   </section>
@@ -517,6 +781,56 @@ function toggleMenu(open) {
 burger.addEventListener('click', () => toggleMenu(!document.body.classList.contains('menu-open')));
 $('.mmenu a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
 matchMedia('(min-width: 961px)').addEventListener('change', e => e.matches && document.body.classList.contains('menu-open') && toggleMenu(false));
+
+// Services carousel (touch): progress hairline follows the swipe
+const track = document.querySelector('.services__track'), prog = document.querySelector('.services__progress i');
+track.addEventListener('scroll', () => { if (innerWidth <= 960) prog.style.transform = `scaleX(${track.scrollLeft / Math.max(1, track.scrollWidth - track.clientWidth)})`; }, { passive: true });
+
+// Endless strips (reviews, client logos): clone one set, then animate by exactly its width (direction lives in the @keyframes)
+function loop(track, pxPerSec) {
+  const set = [...track.children];
+  set.forEach(el => { const k = el.cloneNode(true); k.setAttribute('aria-hidden', 'true'); k.querySelectorAll('img').forEach(i => i.alt = ''); track.append(k); });
+  const measure = () => {
+    const shift = track.children[set.length].offsetLeft - set[0].offsetLeft;
+    track.style.setProperty('--shift', shift + 'px');
+    track.style.setProperty('--dur', shift / pxPerSec + 's');
+  };
+  track.classList.add('is-auto'); measure();
+  addEventListener('resize', measure); addEventListener('load', measure); // images give the real widths
+}
+const rv = document.querySelector('[data-reviews]');
+if (!reduce) {
+  loop(rv, 45);
+  loop(document.querySelector('.logos__track'), 60);
+  rv.addEventListener('touchstart', () => rv.classList.add('is-held'), { passive: true }); // pause while a finger reads a card
+  addEventListener('touchend', () => rv.classList.remove('is-held'));
+}
+
+// Why: picking a card opens it upright with its full text; the fan pauses meanwhile
+const whyDialog = document.querySelector('.why__dialog'), whyStage = document.querySelector('.why__stage');
+const whyCards = $('.why__card');
+let whyFrom = null;
+const showCard = card => { // copy one card's colours and text into the open view
+  whyFrom = card;
+  const cs = getComputedStyle(card);
+  whyDialog.style.setProperty('--c', cs.backgroundColor); whyDialog.style.setProperty('--t', cs.color);
+  ['.cap', 'h3', 'p'].forEach(sel => whyDialog.querySelector(sel).textContent = card.querySelector(sel).textContent);
+  whyDialog.querySelector('.why__count').textContent = `${whyCards.indexOf(card) + 1} / ${whyCards.length}`;
+};
+const openCard = card => { showCard(card); whyDialog.showModal(); whyStage.classList.add('is-paused'); };
+const stepCard = dir => { // arrows loop round: after the last card comes the first
+  showCard(whyCards[(whyCards.indexOf(whyFrom) + dir + whyCards.length) % whyCards.length]);
+  if (!reduce) whyDialog.animate([{ opacity: 0, transform: `translateX(${dir * 40}px)` }, {}], { duration: 450, easing: 'cubic-bezier(.16,1,.3,1)' });
+};
+whyDialog.querySelectorAll('.why__arrow').forEach(b => b.addEventListener('click', () => stepCard(+b.dataset.dir)));
+whyDialog.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); stepCard(e.key === 'ArrowRight' ? 1 : -1); } });
+$('.why__card').forEach(card => {
+  card.addEventListener('click', () => openCard(card));
+  card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCard(card); } });
+});
+whyDialog.querySelector('.why__close').addEventListener('click', () => whyDialog.close());
+whyDialog.addEventListener('click', e => { if (e.target === whyDialog) { const r = whyDialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) whyDialog.close(); } }); // click on the dimmed backdrop
+whyDialog.addEventListener('close', () => { whyStage.classList.remove('is-paused'); whyFrom && whyFrom.focus({ preventScroll: true }); });
 
 // ---------- Devis form: sent by e-mail through FormSubmit (no server needed) ----------
 const devisForm = document.getElementById('devis');
@@ -603,43 +917,8 @@ if (reduce || !window.gsap || !window.ScrollTrigger) {
   document.body.append(bar);
   gsap.to(bar, { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: .3 } });
 
-  // ---------- Generic reveals ----------
-  $('[data-lines]').forEach(el => gsap.from(el.querySelectorAll('.line > span'), {
-    yPercent: 105, duration: 1.3, stagger: .1, ease: 'expo.out',
-    scrollTrigger: { trigger: el, start: 'top 85%' }
-  }));
-  $('[data-rule]').forEach(el => gsap.from(el, { scaleX: 0, duration: 1.4, ease: 'expo.inOut', scrollTrigger: { trigger: el, start: 'top 92%' } }));
-  $('[data-fade]').forEach(el => gsap.from(el, { y: 30, opacity: 0, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 90%' } }));
-  $('.reveal-img').forEach(el => gsap.to(el, { clipPath: 'inset(0% 0 0 0)', duration: 1.6, ease: 'expo.inOut', scrollTrigger: { trigger: el, start: 'top 85%' } }));
-  $('img[data-speed]').forEach(img => gsap.fromTo(img, { yPercent: -img.dataset.speed / 2 }, {
-    yPercent: img.dataset.speed / 2, ease: 'none',
-    scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true }
-  }));
-
-  // Manifesto: words light up as you read
-  gsap.fromTo('[data-words] .w', { opacity: .14 }, {
-    opacity: 1, stagger: .1, ease: 'none',
-    scrollTrigger: { trigger: '[data-words]', start: 'top 80%', end: 'bottom 45%', scrub: true }
-  });
-
-  // Why rows
-  $('.why__row').forEach(row => gsap.from(row.querySelectorAll('.cap, .h-sm, p'), {
-    y: 40, opacity: 0, duration: 1.1, stagger: .08, ease: 'expo.out',
-    scrollTrigger: { trigger: row, start: 'top 88%' }
-  }));
-
-  // Clients grid
-  gsap.from('[data-stagger] li', {
-    opacity: 0, y: 30, duration: .9, stagger: { each: .05, grid: 'auto', from: 'start' }, ease: 'expo.out',
-    scrollTrigger: { trigger: '[data-stagger]', start: 'top 85%' }
-  });
-
-  // Atmosphere: frame opens to full bleed while image settles
-  const atmosTL = gsap.timeline({ scrollTrigger: { trigger: '.atmos', start: 'top top', end: 'bottom bottom', scrub: true } })
-    .to('.atmos__frame', { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none' })
-    .to('.atmos__frame img', { scale: 1, ease: 'none' }, 0);
-
   // ---------- Services: horizontal pinned scroll on desktop ----------
+  // created before every trigger below it on the page, so their start positions include the pin distance
   const mm = gsap.matchMedia();
   mm.add('(min-width: 961px)', () => {
     const track = document.querySelector('.services__track');
@@ -656,8 +935,58 @@ if (reduce || !window.gsap || !window.ScrollTrigger) {
     }));
   });
   mm.add('(max-width: 960px)', () => {
-    $('.card').forEach(card => gsap.from(card, { y: 60, opacity: 0, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: card, start: 'top 88%' } }));
+    gsap.from('.card', { x: 80, opacity: 0, duration: 1.2, stagger: .1, ease: 'expo.out', scrollTrigger: { trigger: '.services__track', start: 'top 85%' } });
   });
+
+  // ---------- Generic reveals ----------
+  $('[data-lines]').forEach(el => gsap.from(el.querySelectorAll('.line > span'), {
+    yPercent: 105, duration: 1.3, stagger: .1, ease: 'expo.out',
+    scrollTrigger: { trigger: el, start: 'top 85%' }
+  }));
+  $('[data-rule]').forEach(el => gsap.from(el, { scaleX: 0, duration: 1.4, ease: 'expo.inOut', scrollTrigger: { trigger: el, start: 'top 92%' } }));
+  $('[data-fade]').forEach(el => gsap.from(el, { y: 30, opacity: 0, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 90%' } }));
+  $('.reveal-img').forEach(el => gsap.to(el, { clipPath: 'inset(0% 0 0 0)', duration: 1.6, ease: 'expo.inOut', scrollTrigger: { trigger: el, start: 'top 85%' } }));
+  $('img[data-speed]').forEach(img => gsap.fromTo(img, { yPercent: -img.dataset.speed / 2 }, {
+    yPercent: img.dataset.speed / 2, ease: 'none',
+    scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true }
+  }));
+
+  // L'agence: each photo settles from a zoom as it scrolls in, and lights up its line in the sticky list
+  $('.about__fig img').forEach(img => gsap.fromTo(img, { scale: 1.25 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'top 15%', scrub: true } }));
+  mm.add('(min-width: 961px)', () => {
+    const list = document.querySelector('.about__list'), steps = $('li', list);
+    list.classList.add('is-tracking');
+    const setStep = i => steps.forEach((li, n) => li.classList.toggle('is-active', n === i));
+    setStep(0);
+    $('.about__fig').forEach((fig, i) => ScrollTrigger.create({ trigger: fig, start: 'top 55%', end: 'bottom 55%', onToggle: self => self.isActive && setStep(i) }));
+    return () => { list.classList.remove('is-tracking'); setStep(-1); };
+  });
+
+  // Manifesto: words light up as you read
+  gsap.fromTo('[data-words] .w', { opacity: .14 }, {
+    opacity: 1, stagger: .1, ease: 'none',
+    scrollTrigger: { trigger: '[data-words]', start: 'top 80%', end: 'bottom 45%', scrub: true }
+  });
+
+  // Why: the fan opens from a stack, then turns with the scroll (on top of the slow CSS spin)
+  gsap.fromTo('.why__wheel', { '--open': 0 }, { '--open': 1, duration: 1.8, ease: 'expo.inOut', scrollTrigger: { trigger: '.why__stage', start: 'top 75%' } }); // --open fans the cards out from one stack
+  gsap.fromTo('.why__wheel', { rotate: -50 }, { rotate: 130, ease: 'none', scrollTrigger: { trigger: '.why__stage', start: 'top bottom', end: 'bottom top', scrub: .8 } });
+
+  // Clients logos fade up together
+  gsap.from('[data-logos]', { opacity: 0, y: 30, duration: 1.2, ease: 'expo.out', scrollTrigger: { trigger: '[data-logos]', start: 'top 90%' } });
+
+  // Reviews cards slide in one after the other
+  gsap.from('[data-reviews] .review', {
+    x: 80, opacity: 0, duration: 1.2, stagger: .08, ease: 'expo.out',
+    scrollTrigger: { trigger: '[data-reviews]', start: 'top 85%' }
+  });
+
+  // Atmosphere: one-shot reveal of the full-bleed frame, no scroll-linked animation (janky on mobile)
+  gsap.fromTo('.atmos__frame', { clipPath: 'inset(14% 18% 14% 18%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease: 'expo.inOut', scrollTrigger: { trigger: '.atmos', start: 'top 85%', once: true } });
+  // Atmosphere text travels from the top of the image to the bottom with the scroll (transform only, smooth on mobile)
+  const atmosTxt = document.querySelector('.atmos__txt');
+  const atmosFree = () => atmosTxt.firstElementChild.offsetTop - parseFloat(getComputedStyle(atmosTxt).paddingTop); // empty space above the bottom-aligned text
+  gsap.fromTo(atmosTxt, { y: () => -atmosFree() }, { y: 0, ease: 'none', scrollTrigger: { trigger: '.atmos', start: 'top 60%', end: 'bottom 40%', scrub: .6, invalidateOnRefresh: true } });
 
   // ---------- Micro-interactions: magnetic buttons ----------
   if (matchMedia('(hover: hover)').matches) $('[data-magnetic]').forEach(btn => {
@@ -666,7 +995,12 @@ if (reduce || !window.gsap || !window.ScrollTrigger) {
     btn.addEventListener('mouseleave', () => { xTo(0); yTo(0); });
   });
 
-  addEventListener('load', () => ScrollTrigger.refresh());
+  addEventListener('load', () => {
+    ScrollTrigger.refresh();
+    // the desktop pin adds height after the browser already jumped to #anchor: jump again to the right place
+    const target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (target) target.scrollIntoView({ behavior: 'instant' });
+  });
 }
 </script>
 </body>
