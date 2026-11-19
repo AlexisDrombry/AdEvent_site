@@ -26,11 +26,13 @@ Pages de service, en reprenant les chemins de l'ancien site pour garder leur ré
 | Page | URL |
 |---|---|
 | Accueil | `/` |
-| DJ mariage | `/dj-mariage-hauts-de-france` |
-| Événements professionnels | `/dj-evenement-professionnel-hauts-de-france` |
-| Soirées privées | `/dj-particulier-hauts-de-france` |
-| Photobooth | `/location-photobooth-hauts-de-france` |
-| Options et services | `/services-evenementiels-dj-hauts-de-france` |
+| DJ mariage (cœur de métier) | `/dj-mariage-hauts-de-france` |
+| DJ événement privé : anniversaire, baptême, communion, mairie… (cœur de métier) | `/dj-particulier-hauts-de-france` |
+| DJ événement d'entreprise : séminaire, gala, lancement de produit… (cœur de métier) | `/dj-evenement-professionnel-hauts-de-france` |
+| Blind test et quiz interactifs (une page, plusieurs formules selon le nombre de manches) | `/animation-blind-test-quiz-hauts-de-france` |
+| Location de photobooth (offre propre) | `/location-photobooth-hauts-de-france` |
+| Location de videobooth 360 (offre propre) | `/location-videobooth-360-hauts-de-france` |
+| Réalisations : photos, références et avis clients | `/realisations` |
 | Mentions légales | `/mentions-legales` |
 | Confidentialité | `/politique-de-confidentialite` |
 
@@ -134,11 +136,11 @@ Objectifs mesurés sur mobile : **LCP < 2,5 s, INP < 200 ms, CLS < 0,1**.
 
 ## 9. Redirections à configurer à la mise en ligne
 
-Lister ici chaque ancienne URL qui change, avec sa nouvelle cible (301). Vide pour l'instant, car les chemins des pages de service sont conservés.
+Lister ici chaque ancienne URL qui change, avec sa nouvelle cible (301).
 
 | Ancienne URL | Nouvelle URL |
 |---|---|
-| | |
+| `/services-evenementiels-dj-hauts-de-france` | `/` (cible à confirmer avec l'utilisateur ; l'offre « Options » est supprimée) |
 
 Forcer aussi `http://` vers `https://` et `adevenements.fr` vers `www.adevenements.fr` (ou l'inverse, mais une seule version, identique aux canonical).
 
